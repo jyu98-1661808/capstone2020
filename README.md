@@ -28,3 +28,10 @@ Please be sure to include your operating system, device, version number, and ste
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## Contact
+
+:tiger: Jiyun Yu, *front-end developer*: jyu98@uw.edu </br>
+:rabbit: Chad Ohta, *back-end developer*: chadohta@gmail.com </br>
+:dog: Andre Magallanes, *UX/UI designer*: magalj@uw.edu </br>
+:panda_face: Adam Pumputis, *graphic designer*: akyp@uw.edu
