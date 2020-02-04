@@ -6,7 +6,7 @@ Each endangered species (5 in total) represents a topic in the math curricula; u
 
 ## Installation
 
-You can download the app from our releases page.   
+You can download the app from our [releases page](https://github.com/jyu98-1661808/capstone2020/releases/tag/v1.0.0).   
   
 If you want to build and run the project with mock data, then follow the instructions below.
 1. First, clone the repository:
