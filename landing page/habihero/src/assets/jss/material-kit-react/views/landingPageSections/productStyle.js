@@ -13,7 +13,7 @@ const productStyle = {
     textDecoration: "none"
   },
   description: {
-    color: "#999"
+    color: "#202020"
   }
 };
 

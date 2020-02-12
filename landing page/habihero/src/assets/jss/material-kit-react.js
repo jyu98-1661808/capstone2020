@@ -1,22 +1,4 @@
-/*!
-
- =========================================================
- * Material Kit React - v1.8.0 based on Material Kit - v2.0.2
- =========================================================
-
- * Product Page: https://www.creative-tim.com/product/material-kit-react
- * Copyright 2019 Creative Tim (https://www.creative-tim.com)
- * Licensed under MIT (https://github.com/creativetimofficial/material-kit-react/blob/master/LICENSE.md)
-
- =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
- */
-
-// ##############################
-// // // Variables - Styles that are used on more than one component
-// #############################
+// Based off of Creative Tim's Material Kit React 
 
 const drawerWidth = 260;
 
@@ -75,7 +57,7 @@ const dangerColor = "#f44336";
 const successColor = "#4caf50";
 const infoColor = "#00acc1";
 const roseColor = "#e91e63";
-const grayColor = "#999999";
+const grayColor = "#404040";
 
 const primaryBoxShadow = {
   boxShadow:

@@ -2,10 +2,6 @@ import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
-// @material-ui/icons
-import Chat from "@material-ui/icons/Chat";
-import VerifiedUser from "@material-ui/icons/VerifiedUser";
-import Fingerprint from "@material-ui/icons/Fingerprint";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
@@ -20,14 +16,19 @@ export default function ProductSection() {
   return (
     <div className={classes.section}>
       <GridContainer justify="center">
-        <GridItem xs={12} sm={12} md={8}>
-          <h2 className={classes.title}>Let{"'"}s talk product</h2>
+        <GridItem xs={12} sm={12} md={10}>
+          <h2 className={classes.title}>About HabiHero</h2>
+          <h4 className={classes.description}> 
+            <i className={classes.logo}> 
+              Habihero is an android application dedicated in helping 1st graders overcome their numeracy difficulties with embedded conservational and environmental values. 
+            </i>
+          </h4>
           <h5 className={classes.description}>
-            This is the paragraph where you can write more details about your
-            product. Keep you user engaged by providing meaningful information.
-            Remember that by this time, the user is curious, otherwise he wouldn
-            {"'"}t scroll to get here. Add a button if you want the user to see
-            more.
+            <br></br><br></br>
+            From basic addition to subtraction, the application utilizes game-based learning through a focus on saving endangered animals. 
+            Each endangered species represents a topic in the math curricula. Users must solve a variety of math problems pertaining to 
+            that topic in order to clean up the animal's terrible environment. We aim to help students get the practice they need to 
+            improve their math skills through a fun and more meaningful way.
           </h5>
         </GridItem>
       </GridContainer>
@@ -35,28 +36,27 @@ export default function ProductSection() {
         <GridContainer>
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
-              title="Free Chat"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-              icon={Chat}
-              iconColor="info"
+              title="Unlock New Animals"
+              description="From orcas to pandas, progress through each level of the game to encounter a variety of endangered animals. 
+                           Explore their habitat and help save them from dangers."
+              icon=':tiger_face:'
               vertical
             />
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
-              title="Verified Users"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-              icon={VerifiedUser}
-              iconColor="success"
+              title="Solve Interactive Problems"
+              description="Our gameplay allows students to solve relevant math problems that relate to the environment. 
+                           Correct answers give them the opportunity to be a hero!"
+              icon=':panda_face:'
               vertical
             />
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
-              title="Fingerprint"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-              icon={Fingerprint}
-              iconColor="danger"
+              title="Make A Difference"
+              description=" By instilling conservational values at an early age, future generations can challenge the environmental issues that affect our beloved animals."
+              icon=':koala:'
               vertical
             />
           </GridItem>
