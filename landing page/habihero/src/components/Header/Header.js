@@ -108,20 +108,13 @@ export default function Header(props) {
 }
 
 Header.defaultProp = {
-  color: "white"
+  color: "brandcolor"
 };
 
 Header.propTypes = {
   color: PropTypes.oneOf([
     "primary",
-    "info",
-    "success",
-    "warning",
-    "danger",
-    "transparent",
-    "white",
-    "rose",
-    "dark"
+    "transparent"
   ]),
   rightLinks: PropTypes.node,
   leftLinks: PropTypes.node,
@@ -137,15 +130,9 @@ Header.propTypes = {
   changeColorOnScroll: PropTypes.shape({
     height: PropTypes.number.isRequired,
     color: PropTypes.oneOf([
-      "primary",
-      "info",
-      "success",
-      "warning",
-      "danger",
       "transparent",
       "white",
-      "rose",
-      "dark"
+      "brandcolor"
     ]).isRequired
   })
 };
