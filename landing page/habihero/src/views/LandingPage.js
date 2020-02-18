@@ -11,7 +11,6 @@ import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Button from "components/CustomButtons/Button.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 
@@ -21,6 +20,7 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 import ProductSection from "./sections/ProductSection.js";
 import TeamSection from "./sections/TeamSection.js";
 import WorkSection from "./sections/WorkSection.js";
+import FeatureSection from "./sections/FeatureSection.js";
 
 const dashboardRoutes = [];
 
@@ -48,21 +48,8 @@ export default function LandingPage(props) {
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>Title goes here</h1>
-              <h4>
-                Lorem ipsum
-              </h4>
+              <h1 className={classes.title}>Saving a habitat, <br /> One problem at a time.</h1>
               <br />
-              <Button
-                color="danger"
-                size="lg"
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ref=creativetim"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fas fa-play" />
-                Watch video
-              </Button>
             </GridItem>
           </GridContainer>
         </div>
@@ -70,6 +57,7 @@ export default function LandingPage(props) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           <ProductSection />
+          <FeatureSection />
           <TeamSection />
           <WorkSection />
         </div>

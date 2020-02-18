@@ -33,16 +33,24 @@ export default function TeamSection() {
   return (
     <div className={classes.section}>
       <h2 className={classes.title}>Our Team</h2>
+      <br />
+      <h4 className={classes.description}>
+        <i>
+          We are a team of Informatics students, attending the University of Washington in Seattle. <br />
+          HabiHero is our capstone project that we have dedicated nearly 6 months to, and we can't wait to release our app. 
+        </i>
+      </h4>
+      <br />
       <div>
-        <GridContainer>       
+        <GridContainer>     
           <TeamMember classes={classes} imageClasses={imageClasses} teamName='Jiyun Yu' teamJob='front-end developer' 
-            teamImage={team1} teamDescription='Details' />
+            teamImage={team1} teamDescription='jyu98@uw.edu' />
           <TeamMember classes={classes} imageClasses={imageClasses} teamName='Chad Ohta' teamJob='back-end developer' 
-            teamImage={team2} teamDescription='Details' />
+            teamImage={team2} teamDescription='chadohta@gmail.com' />
           <TeamMember classes={classes} imageClasses={imageClasses} teamName='Andre Magallanes' teamJob='UX/UI designer' 
-            teamImage={team3} teamDescription='Details' />
+            teamImage={team3} teamDescription='magalj@uw.edu' />
           <TeamMember classes={classes} imageClasses={imageClasses} teamName='Adam Pumputis' teamJob='graphic designer' 
-            teamImage={team4} teamDescription='Details' />
+            teamImage={team4} teamDescription='akyp@uw.edu' />
         </GridContainer>
       </div>
     </div>

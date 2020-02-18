@@ -96,12 +96,11 @@ const headerStyle = {
       "0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15)"
   },
   brandcolor: {
-    //backgroundImage: "linear-gradient(to bottom right, #1562F2, #FE4A49,FED766)",
     border: "0",
     padding: "0.625rem 0",
     marginBottom: "20px",
     color: "#fff",
-    backgroundImage: "linear-gradient(to bottom right, #1562F2, #FE4A49, #FED766)",
+    backgroundImage: "linear-gradient(to bottom right, #95C942, #CADF83, #C9E4CA)",
     boxShadow:
       "0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15)"
   },

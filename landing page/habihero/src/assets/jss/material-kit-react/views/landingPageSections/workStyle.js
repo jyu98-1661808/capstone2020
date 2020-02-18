@@ -1,13 +1,9 @@
 import { title } from "assets/jss/material-kit-react.js";
 
 const workStyle = {
-  section: {
-    padding: "70px 0"
-  },
   title: {
     ...title,
-    marginBottom: "50px",
-    marginTop: "30px",
+    marginBottom: "25px",
     minHeight: "32px",
     textDecoration: "none",
     textAlign: "center"
