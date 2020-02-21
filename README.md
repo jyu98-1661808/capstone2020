@@ -5,6 +5,8 @@
 From basic addition to subtraction, the application utilizes game-based learning through a focus on saving endangered animals.
 Each endangered species (5 in total) represents a topic in the math curricula; users must solve a variety of math problems pertaining to that topic in order to clean up the animal's terrible environment.  
 
+[Check out our website for more information and download our app!] (https://jyu98-1661808.github.io/capstone2020/)
+
 ## Installation
 
 You can download the app from our [releases page](https://github.com/jyu98-1661808/capstone2020/releases/tag/v1.0.0).   
