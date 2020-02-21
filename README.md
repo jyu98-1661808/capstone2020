@@ -3,7 +3,7 @@
 *Habihero is an android application dedicated in helping 1st graders overcome their numeracy difficulties with embedded conservational and environmental values.*
   
 From basic addition to subtraction, the application utilizes game-based learning through a focus on saving endangered animals.
-Each endangered species (5 in total) represents a topic in the math curricula; users must solve a variety of math problems pertaining to that topic in order to clean up the animal's terrible environment.  
+Each endangered species (4 in total) represents a topic in the math curricula; users must solve a variety of math problems pertaining to that topic in order to clean up the animal's terrible environment.  
 
 [Check out our website for more information and download our app!](https://jyu98-1661808.github.io/capstone2020/)
 
