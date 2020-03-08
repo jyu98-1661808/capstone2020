@@ -1,6 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EnvironmentActivity"
+    android:background="@drawable/enviro_background">
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/habicoins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coin"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintRight_toLeftOf="@id/habicoins_text"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/habicoins_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="0"
+        android:textSize="30sp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="50dp"/>
+
+    <TextView
+        android:id="@+id/habicoins_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/habicoins_counter"
+        android:text="habicoins"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="25dp"/>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:minWidth="250dp"
+        android:progress="10"
+        android:progressBackgroundTint="#FFFFFF"
+        android:progressTint="#8dc63f"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingBottom="35dp"/>
+
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/progress"
+        app:layout_constraintBottom_toTopOf="@id/progress"
+        android:text="Level 1"
+        android:textSize="16sp"
+        android:paddingStart="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="12dp"/>
+
+    <Button
+        android:id="@+id/home_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="25dp"
+        android:text=" HOME"
+        android:textColor="#FFFFFF"
+        android:background="?android:attr/selectableItemBackground"
+        android:drawableLeft="@android:drawable/ic_media_previous"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/mission_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:paddingHorizontal="10dp"
+        android:background="@drawable/ripple"
+        app:cornerRadius="5dp"
+        android:textAllCaps="false"
+        android:drawableLeft="@android:drawable/ic_media_previous"
+        android:text=" Missions"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/GetStarted/GetStarted.iml" filepath="$PROJECT_DIR$/GetStarted/GetStarted.iml" />
       <module fileurl="file://$PROJECT_DIR$/HabiHero.iml" filepath="$PROJECT_DIR$/HabiHero.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UIReferenceImplementation/UIReferenceImplementation.iml" filepath="$PROJECT_DIR$/UIReferenceImplementation/UIReferenceImplementation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/habiherolibrary/android-habiherolibrary.iml" filepath="$PROJECT_DIR$/habiherolibrary/android-habiherolibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/habiherolibrary/habiherolibrary.iml" filepath="$PROJECT_DIR$/habiherolibrary/habiherolibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/interactive-ink-examples-android/interactive-ink-examples-android.iml" filepath="$PROJECT_DIR$/libraries/interactive-ink-examples-android/interactive-ink-examples-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/libraries.iml" filepath="$PROJECT_DIR$/libraries/libraries.iml" />
     </modules>
   </component>
 </project>

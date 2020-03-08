@@ -2,6 +2,7 @@ package edu.washington.jyu98.habihero
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Typeface
 import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,7 +17,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.animal_list.view.*
 import java.util.*
 import kotlin.collections.ArrayList
-
+import android.graphics.Typeface.createFromAsset
 
 
 
@@ -29,22 +30,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Gets rid of title bar
         if (getSupportActionBar() != null) {
             getSupportActionBar()!!.hide()
         }
 
+        // Attaches adapter & layout manager
         recyclerAnimals.adapter = AnimalAdapter(animals, this)
         recyclerAnimals.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
-        val animal = Animal("Temporary Name", getDrawable(R.drawable.animal_paw)!!, "Temporary Topic", 0)
-        animals.add(animal)
-        animals.add(animal)
-        animals.add(animal)
-        animals.add(animal)
-        animals.add(animal)
+        // Creates test animals for the recycler view
+        val animal1 = Animal("Tim Tiger", getDrawable(R.drawable.home_tiger)!!, "Addition", 30)
+        val animal2 = Animal("Locked", getDrawable(R.drawable.lock)!!, "Temporary Topic", 0)
+        animals.add(animal1)
+        animals.add(animal2)
+        animals.add(animal2)
+        animals.add(animal2)
     }
 
-    // custom Animal Adapter
+    // Custom Animal Adapter
     class AnimalAdapter(private val animalList: ArrayList<Animal>, val context: Context) :
         RecyclerView.Adapter<AnimalAdapter.ViewHolder>() {
         class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -56,18 +60,31 @@ class MainActivity : AppCompatActivity() {
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
             val view = LayoutInflater.from(parent.context).inflate(R.layout.animal_list, parent, false)
+
             return ViewHolder(view)
         }
 
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             val item = animalList[position]
             holder.nameView.text = item.name
+            val typeface = createFromAsset(context.assets,"franxurter.ttf")
+
+            holder.nameView.typeface = typeface
             holder.imageView.setImageDrawable(item.image)
             holder.topicView.text = item.topic
+            holder.topicView.typeface = typeface
             holder.progressView.progress = item.progress
 
+            if (position > 0) {
+                holder.imageView.setPadding(0,140,0,0)
+            }
+
+            // Click animal to go to environment
             holder.imageView.setOnClickListener {
-                Toast.makeText(context,"clicked",Toast.LENGTH_SHORT).show()
+                val intent = Intent(context, EnvironmentActivity::class.java).apply {
+                    putExtra("key", position)
+                }
+                context.startActivity(intent)
             }
         }
 

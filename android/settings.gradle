@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':habiherolibrary', ':UIReferenceImplementation'
 rootProject.name='HabiHero'
