@@ -1,0 +1,25 @@
+.home {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../background/home_background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+  }
+  
+  .header img {
+    padding: 3em;
+  }
+  
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+  }

@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route, Link } from 'react-router-dom'
-import Home from './pages/Home'
-import TigerEnvironment from './pages/TigerEnvironment'
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+import Home from './pages/Home';
+import TigerEnvironment from './pages/TigerEnvironment';
 
 function App() {
   return (
