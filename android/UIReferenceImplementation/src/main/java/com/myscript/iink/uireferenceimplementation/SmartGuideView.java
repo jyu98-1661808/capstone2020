@@ -604,7 +604,7 @@ public class SmartGuideView extends LinearLayout implements IEditorListener2, IR
     }
     else
     {
-      fadeOutTimerHandler.removeCallbacks(fadeOutTimerRunnable);
+      //fadeOutTimerHandler.removeCallbacks(fadeOutTimerRunnable);
 
       post(new Runnable()
       {

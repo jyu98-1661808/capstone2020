@@ -631,7 +631,7 @@ id customPanel
 id decor_content_parent
 id default_activity_button
 id edit_query
-id editor_view
+id editor_view2
 id end
 id expand_activities_button
 id expanded_menu

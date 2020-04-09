@@ -4,16 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EnvironmentActivity"
-    android:background="@drawable/enviro_background">
+    tools:context=".EnvironmentActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/enviro_background" />
+
+    <ImageButton
+        android:id="@+id/tree_fire"
+        android:layout_width="170dp"
+        android:layout_height="220dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:background="@drawable/tree_fire"
+        android:layout_marginLeft="350dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/progress"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <ImageView
+        android:id="@+id/tree"
+        android:layout_width="170dp"
+        android:layout_height="220dp"
+        android:src="@drawable/tree"
+        android:layout_marginLeft="350dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/progress"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:visibility="gone"/>
 
     <ImageView
         android:id="@+id/habicoins"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/coin"
-        android:layout_marginTop="60dp"
-        android:layout_marginRight="10dp"
+        android:src="@drawable/habicoins"
+        android:layout_marginTop="50dp"
         app:layout_constraintRight_toLeftOf="@id/habicoins_text"
         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -21,12 +48,13 @@
         android:id="@+id/habicoins_counter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:text="0"
-        android:textSize="30sp"
+        android:textSize="40sp"
         android:layout_marginTop="50dp"
-        android:layout_marginRight="50dp"/>
+        android:layout_marginRight="70dp"/>
 
     <TextView
         android:id="@+id/habicoins_text"
@@ -34,21 +62,32 @@
         android:layout_height="wrap_content"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/habicoins_counter"
-        android:text="habicoins"
-        android:textSize="20sp"
+        android:textColor="#c9e4ca"
+        android:text="habi-coins"
+        android:textSize="30sp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="25dp"/>
+
+    <ImageView
+        android:id="@+id/habibadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/habibadge"
+        android:layout_marginLeft="400dp"
+        app:layout_constraintRight_toLeftOf="@id/progress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingBottom="15dp"/>
 
     <ProgressBar
         android:id="@+id/progress"
         style="@android:style/Widget.ProgressBar.Horizontal"
         android:minWidth="250dp"
-        android:progress="10"
+        android:progress="0"
         android:progressBackgroundTint="#FFFFFF"
         android:progressTint="#8dc63f"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="300dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:paddingBottom="35dp"/>
@@ -60,7 +99,8 @@
         app:layout_constraintLeft_toLeftOf="@id/progress"
         app:layout_constraintBottom_toTopOf="@id/progress"
         android:text="Level 1"
-        android:textSize="16sp"
+        android:textSize="40sp"
+        android:textColor="#016e90"
         android:paddingStart="12dp"
         android:paddingTop="8dp"
         android:paddingBottom="12dp"/>
@@ -76,24 +116,28 @@
         android:text=" HOME"
         android:textColor="#FFFFFF"
         android:background="?android:attr/selectableItemBackground"
-        android:drawableLeft="@android:drawable/ic_media_previous"
-        android:textSize="30sp"/>
+        android:drawableLeft="@mipmap/home"
+        android:textSize="42sp"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/mission_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="25dp"
-        android:paddingHorizontal="10dp"
-        android:background="@drawable/ripple"
-        app:cornerRadius="5dp"
-        android:textAllCaps="false"
-        android:drawableLeft="@android:drawable/ic_media_previous"
-        android:text=" Missions"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
+        android:layout_width="225dp"
+        android:layout_height="175dp"
+        android:layout_marginLeft="55dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/mission_button"
+        android:background="@null"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/water_icon"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/dim_water_icon"
+        android:layout_margin="25dp"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,13 +1,12 @@
 package edu.washington.jyu98.habihero
 
 import android.content.Intent
+import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.google.android.material.internal.ContextUtils.getActivity
 import kotlinx.android.synthetic.main.activity_environment.*
-//import edu.washington.jyu98.habihero.MyCertificate
-import com.myscript.iink.*
-
 
 class EnvironmentActivity : AppCompatActivity() {
 
@@ -15,9 +14,15 @@ class EnvironmentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_environment)
 
+        val typeface = Typeface.createFromAsset(this.assets, "franxurter.ttf")
+        home_button.typeface = typeface
+        habicoins_counter.typeface = typeface
+        habicoins_text.typeface = typeface
+        level.typeface = typeface
+
         // Gets rid of title bar
-        if (getSupportActionBar() != null) {
-            getSupportActionBar()!!.hide()
+        if (supportActionBar != null) {
+            supportActionBar!!.hide()
         }
 
         //val key = intent.getStringExtra("key")
@@ -34,18 +39,13 @@ class EnvironmentActivity : AppCompatActivity() {
             finish()
         }
 
+        water_icon.setOnClickListener {
+            tree_fire.setOnClickListener{
+                tree_fire.visibility = View.GONE
+                tree.visibility = View.VISIBLE
+            }
+            water_icon.setBackgroundResource(R.drawable.dim_water_icon)
+        }
+
     }
-
-//    private var engine: Engine? = null
-//
-//    @Synchronized
-//    fun getEngine(): Engine? {
-//        if (engine == null) {
-//            engine = Engine.create(MyCertificate.getBytes())
-//        }
-//
-//        return engine
-//    }
-
-
 }

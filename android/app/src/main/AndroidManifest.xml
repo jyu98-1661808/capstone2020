@@ -19,7 +19,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".EnvironmentActivity" android:screenOrientation="landscape"></activity>
-        <activity android:name=".MathActivity" android:screenOrientation="landscape"></activity>
     </application>
 
 </manifest>

@@ -15,7 +15,7 @@ id BACKGROUND
 id CAPTURE
 id MODEL
 id TEMPORARY
-id editor_view
+id editor_view2
 id layer_background
 id layer_capture
 id layer_model

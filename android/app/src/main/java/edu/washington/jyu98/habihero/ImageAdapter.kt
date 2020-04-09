@@ -2,22 +2,23 @@ package edu.washington.jyu98.habihero
 
 import android.app.Activity
 import android.content.Context
-import android.graphics.drawable.Drawable
 import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.GridView
 import android.widget.ImageView
+import kotlinx.android.synthetic.main.single_pollutant.view.*
 
-class ImageAdapter internal constructor(private val mContext: Context, private val num: Int) : BaseAdapter() {
 
-    // References to our images
+class ImageAdapter internal constructor(private val mContext: Context, private var num: Int) : BaseAdapter() {
+
     private val mThumbIds: MutableList<Int> = ArrayList()
 
     init {
         var count = 0
-        while (0 < num) {
+        while (count < num) {
             mThumbIds.add(R.drawable.fire)
             count++
         }
@@ -56,10 +57,7 @@ class ImageAdapter internal constructor(private val mContext: Context, private v
         } else {
             holder = myView.tag as ViewHolder
         }
-
-        //Setting Image to ImageView by position
         holder.mImageView!!.setImageResource(R.drawable.fire)
-
         return myView
 
     }
