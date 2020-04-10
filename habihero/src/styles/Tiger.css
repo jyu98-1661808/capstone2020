@@ -1,0 +1,31 @@
+body {
+    font-family: 'franxurter';
+}
+
+.tiger-environment {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../assets/background/enviro_background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+img.mission-button {
+    position: absolute;
+    left: 0%;
+    width: 20%;
+    height: auto;
+}
+
+div.footer {
+    width: 100vw;
+    height: 20vh;
+}
+
+img.water-icon {
+    position: absolute;
+    left: 90%;
+    width: 7.5%;
+    height: auto;
+}
+  

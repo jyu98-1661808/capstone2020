@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import './fonts/franxurter.ttf';
+// import './fonts/franxurter-fat.ttf';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import TigerEnvironment from './pages/TigerEnvironment';
 
 function App() {
-  return (
-  <BrowserRouter>
+  return <BrowserRouter>
     <div className="App">
       {/* <header className="App-header">
         <Link to="/">Home</Link>
@@ -17,7 +18,6 @@ function App() {
       <Route path="/timtiger" component={TigerEnvironment} />
     </div>
   </BrowserRouter>
-  );
 }
 
 export default App;
