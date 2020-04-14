@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import './fonts/franxurter.ttf';
+// import './fonts/franxurter.ttf';
 // import './fonts/franxurter-fat.ttf';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Home from './pages/Home';
