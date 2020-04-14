@@ -1,25 +1,105 @@
+body {
+    font-family: 'franxurter';
+}
+
 .home {
     width: 100vw;
     height: 100vh;
-    background-image: url('../background/home_background.png');
+    background-image: url('../assets/background/home_background.png');
     background-repeat: no-repeat;
     background-size: cover;
-  }
+}
   
-  .header {
+.header {
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100vw;
-  }
+}
   
-  .header img {
+.header img {
     padding: 3em;
-  }
-  
-  .footer {
+}
+
+.header button {
+    position: fixed;
+    top: 5%;
+    right: 5%;
+}
+
+.animal-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.animal-description h1 {
+    margin-top: 5%;
+    font-size: 300%;
+    color: rgb(244, 250, 210)
+}
+
+.animal-description h2 {
+    margin-top: -10%;
+    font-size: 250%;
+    color: rgb(226, 250, 210)
+}
+
+.carousel {
+    padding-top: 7.5%;
+    padding-bottom: 10%;
+    height: 30vh;
+    width: 55vw;
+    margin: 0 auto;
+}
+
+.carousel img {
+    margin: auto;
+}
+
+.previous-button, .next-button {
+    font-size: 275%;
+    position: fixed;
+    color: rgb(209, 241, 206);
+    top: 40%;
+    z-index: 10;
+}
+
+.previous-button {
+    left: 20%;
+}
+
+.next-button {
+    right: 20%;
+}
+
+/* .slick-prev, .slick-next {
+    margin-left: 40px;
+    color: white !important;
+    z-index: 4;
+} */
+
+.footer {
+    position: fixed;
+    bottom: 2.5%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100vw;
-  }
+    height: 50vh;
+}
+
+.footer img {
+    position: fixed;
+    bottom: 2.5%;
+    left: 5%;
+    height: 50%;
+    width: auto;
+}
+
+.footer button {
+    position: fixed;
+    bottom: 2.5%;
+    height: 5%;
+}
