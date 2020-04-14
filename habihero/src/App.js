@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import TigerEnvironment from './pages/TigerEnvironment';
+import MathAddition from './components/addition'; // testing
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
 
       <Route path="/" exact component={Home} />
       <Route path="/timtiger" component={TigerEnvironment} />
+      <Route path="/testing" component={MathAddition} />
     </div>
   </BrowserRouter>
   );
