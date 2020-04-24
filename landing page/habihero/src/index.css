@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'franxurter';
+  src: local('franxurter'), url(./assets/fonts/franxurter.ttf) format('truetype');
+}
+
+body {
+  margin: 0;
+  font-family: 'franxurter', Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
