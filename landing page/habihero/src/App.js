@@ -155,7 +155,7 @@ function App() {
             <ol>
               <li><span style={boldStyle}>Sign up</span> for a user interview.</li>
               <li><span style={boldStyle}>Contact us</span> via email.</li>
-              <li><span style={boldStyle}>Share</span> the page with other parents &amp; teaachers.</li>
+              <li><span style={boldStyle}>Share</span> the page with other parents &amp; teachers.</li>
             </ol>
           </div>
           <button type='button' className='btn btn-success'>Sign Up</button>

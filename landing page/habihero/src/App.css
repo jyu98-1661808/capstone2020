@@ -8,6 +8,7 @@ html, body {
   overflow-x: hidden;
   overflow-y: auto;
   max-width: 100%;
+  background: white;
 }
 
 p {
