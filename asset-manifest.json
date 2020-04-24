@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/capstone2020/static/css/main.a0c559b9.chunk.css",
-    "main.js": "/capstone2020/static/js/main.ac9f977e.chunk.js",
-    "main.js.map": "/capstone2020/static/js/main.ac9f977e.chunk.js.map",
-    "runtime-main.js": "/capstone2020/static/js/runtime-main.ebff9e49.js",
-    "runtime-main.js.map": "/capstone2020/static/js/runtime-main.ebff9e49.js.map",
-    "static/js/2.f2da0797.chunk.js": "/capstone2020/static/js/2.f2da0797.chunk.js",
-    "static/js/2.f2da0797.chunk.js.map": "/capstone2020/static/js/2.f2da0797.chunk.js.map",
+    "main.css": "/capstone2020/static/css/main.4e845d90.chunk.css",
+    "main.js": "/capstone2020/static/js/main.6de37899.chunk.js",
+    "main.js.map": "/capstone2020/static/js/main.6de37899.chunk.js.map",
+    "runtime-main.js": "/capstone2020/static/js/runtime-main.db8d3af9.js",
+    "runtime-main.js.map": "/capstone2020/static/js/runtime-main.db8d3af9.js.map",
+    "static/css/2.de424728.chunk.css": "/capstone2020/static/css/2.de424728.chunk.css",
+    "static/js/2.b9dcdcad.chunk.js": "/capstone2020/static/js/2.b9dcdcad.chunk.js",
+    "static/js/2.b9dcdcad.chunk.js.map": "/capstone2020/static/js/2.b9dcdcad.chunk.js.map",
     "index.html": "/capstone2020/index.html",
-    "precache-manifest.05dc32d3c900dbfdf2be50b849b4b5af.js": "/capstone2020/precache-manifest.05dc32d3c900dbfdf2be50b849b4b5af.js",
+    "precache-manifest.df8e9473b5942b7335e3c270705ad375.js": "/capstone2020/precache-manifest.df8e9473b5942b7335e3c270705ad375.js",
     "service-worker.js": "/capstone2020/service-worker.js",
-    "static/css/main.a0c559b9.chunk.css.map": "/capstone2020/static/css/main.a0c559b9.chunk.css.map",
-    "static/js/2.f2da0797.chunk.js.LICENSE.txt": "/capstone2020/static/js/2.f2da0797.chunk.js.LICENSE.txt",
-    "static/media/adam.png": "/capstone2020/static/media/adam.7441e1dc.png",
-    "static/media/andre.png": "/capstone2020/static/media/andre.dda04a02.png",
-    "static/media/chad.png": "/capstone2020/static/media/chad.0d1a8850.png",
-    "static/media/jiyun.png": "/capstone2020/static/media/jiyun.94cb28d9.png",
-    "static/media/temp-background.png": "/capstone2020/static/media/temp-background.8b834687.png"
+    "static/css/2.de424728.chunk.css.map": "/capstone2020/static/css/2.de424728.chunk.css.map",
+    "static/css/main.4e845d90.chunk.css.map": "/capstone2020/static/css/main.4e845d90.chunk.css.map",
+    "static/js/2.b9dcdcad.chunk.js.LICENSE.txt": "/capstone2020/static/js/2.b9dcdcad.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/capstone2020/static/media/banner.1c38df23.png",
+    "static/media/franxurter.ttf": "/capstone2020/static/media/franxurter.75f1c368.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.ebff9e49.js",
-    "static/js/2.f2da0797.chunk.js",
-    "static/css/main.a0c559b9.chunk.css",
-    "static/js/main.ac9f977e.chunk.js"
+    "static/js/runtime-main.db8d3af9.js",
+    "static/css/2.de424728.chunk.css",
+    "static/js/2.b9dcdcad.chunk.js",
+    "static/css/main.4e845d90.chunk.css",
+    "static/js/main.6de37899.chunk.js"
   ]
 }
