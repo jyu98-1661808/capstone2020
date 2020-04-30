@@ -1,47 +1,73 @@
 import React, { Component } from 'react';
 import '../styles/Addition.css';
+// import ChoiceOptions from './choiceOptions';
 
-class MathAddition extends Component {
-    state = { 
-        num1: 0,
-        num2: 0
+class Addition extends Component {
+    state = {
+        answeredCorrectly: false,
+        showResult: false
+    };
+
+    handleOptionClick(num) {
+        if (num === this.props.correctOption) {
+            this.setState({
+                answeredCorrectly: true
+            })
+        }
+        this.setState({
+            showResult: true
+        })
+    };
+
+    newQuestionReset = () => {
+        this.setState({
+            answeredCorrectly: false,
+            showResult: false
+        })
     }
     
-    render() { 
-        return ( 
-            <div id="additionModal" class="modal">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        {/* <span class="close">&times;</span> */}
-                        <h4 class="modal-title">Addition Problem</h4>
+    render() {
+
+        return (
+            <div className="modal">
+                <div className="modal-content">
+                    <div className="modal-header">
+                        <button onClick={ this.props.handleClose } className="close"> Close </button>
+                        <div id="wordQuestion"> <h3> What is {this.props.num1} + {this.props.num2} ? </h3> </div>
+                        <div id="qImageOne"> <img src="temp-holder" alt="" /> </div>
+                        <div id="qImageTwo"> <img src="temp-holder-2" alt="" /> </div>
                     </div>
-                    <div class="modal-body">
-                        <div>{this.state.num1} + {this.state.num2} =</div> 
-                        {/* // empty box */}
+                    <div id="numQuestion" className="modal-body"> 
+                        <div id="numQuestionNumbers"> {this.props.num1} + {this.props.num2} = </div> 
+                        <div id="numQuestionBox"> <img src="empty-box" alt="" /> </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" data-dismiss="modal">Answer One</button>
-                        <button type="button" data-dismiss="modal">Answer Two</button>
-                        <button type="button" data-dismiss="modal">Answer Three</button>
-                        <button type="button" data-dismiss="modal">Answer Four</button>
+                    <div className="modal-footer">
+                        <div className="options-container">
+                            <p className="option" onClick={() => this.handleOptionClick(1)}> {this.props.choiceA} </p>
+                            <p className="option" onClick={() => this.handleOptionClick(2)}> {this.props.choiceB} </p>
+                        </div>
+                        <div className="options-container">
+                            <p className="option" onClick={() => this.handleOptionClick(3)}> {this.props.choiceC} </p>
+                            <p className="option" onClick={() => this.handleOptionClick(4)}> {this.props.choiceD} </p>
+                        </div>
                     </div>
+                    {this.state.showResult &&
+                        <div>
+                            <div id="problemResults"> 
+                                {this.state.answeredCorrectly ? "Correct!" : "Try Again!"}
+                            </div>
+                            <button onClick={() => {
+                                this.props.generateNewProblem()
+                                this.newQuestionReset()
+                            }}> 
+                            New Problem 
+                            </button>
+                        </div>
+                    }
                 </div>
             </div>
         );
     }
-
-    // Generates a random integer between 1 and 10
-    generateNumber() {
-        const numberOne = Math.floor((Math.random() * 10) + 1);
-        const numberTwo = Math.floor((Math.random() * 10) + 1);
-
-        // reset state
-        this.setState({ 
-            num1: numberOne,
-            num2: numberTwo,
-        });
-    }
 }
  
-export default MathAddition;
+export default Addition;

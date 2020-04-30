@@ -2,7 +2,7 @@ import React from 'react';
 import { Carousel } from 'antd';
 import { Link } from "react-router-dom"; 
 import Icon from '@ant-design/icons';
-import RightArrow from '../assets/icons/angle-right-solid.svg';
+// import RightArrow from '../assets/icons/angle-right-solid.svg';
 import 'antd/dist/antd.css';
 import '../styles/Home.css';
 

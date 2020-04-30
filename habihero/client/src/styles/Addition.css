@@ -1,6 +1,5 @@
 /* The Modal (background) */
 .modal {
-  display: true; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
@@ -25,7 +24,7 @@
 .close {
   color: #aaa;
   float: right;
-  font-size: 28px;
+  font-size: 15px;
   font-weight: bold;
 }
 
@@ -34,4 +33,44 @@
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.modal-title { 
+  font-size: 40px;
+}
+
+.modal-body { 
+  text-align: center;
+  font-size: 80px;
+  padding-bottom: 10px;
+}
+
+.modal-footer { 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.answer-option { 
+  flex: 0 48%;
+  height: 50px;
+  margin-bottom: 2%;
+  font-size: 20px;
+}
+
+.options-container {
+  display: inline-block;
+  width: 50%
+}
+
+.option {
+  background-color: rgb(190, 236, 217);
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 90%;
+  font-size: 30px;
 }
