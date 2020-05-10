@@ -1,0 +1,196 @@
+/* student sign up */
+
+div.student-sign-up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../assets/background/signup-background.png);
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'franxurter';
+}
+
+.student-sign-up img.create-text {
+    margin: 3%;
+    width: 15%;
+}
+
+.student-sign-up form.sign-up-form {
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+}
+
+.student-sign-up label.form-label {
+    margin-bottom: -0.25%;
+    font-size: 3vh;
+    color: white;
+}
+
+img.class-code-text {
+    padding-bottom: 2%;
+    width: 10vw;
+    margin-right: 2%;
+}
+
+div.sign-up-info {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+div.hero-options {
+    display: flex;
+    flex-direction: row;
+}
+
+label.custom-control-label {
+    width: 20vw;
+}
+
+.custom-control-label::before {
+    background-color: none !important;
+    border: none !important;
+}
+
+.sign-up-hero h2 {
+    color: white;
+    font-size: 3vh;
+}
+
+div.hero-container {
+    display: flex;
+    justify-content: center;
+    background: white;
+    width: 90%;
+    padding-top: 10%;
+    margin-left: -7%;
+    border-radius: 0.75em;
+}
+
+div#female {
+    padding-top: 17.5%;
+}
+
+.hero-container img {
+    width: 80%;
+}
+
+input[type=radio] { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+div.hero-container {
+    cursor: pointer;
+}
+
+input[type=radio]:checked + div.hero-container {
+    border-radius: 0.75em;
+    box-shadow: 0px 0px 1em #F19B37;
+}
+  
+/* student sign in */
+
+div.student-sign-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../assets/background/signin-background.png);
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'franxurter';
+}
+
+div.student-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    width: 100%;
+}
+
+.student-back-btn i {
+    vertical-align: middle;
+    font-size: 3vh;
+}
+
+a.student-back-btn {
+    position: absolute;
+    font-size: 4vh;
+    left: 4%;
+}
+
+.student-back-btn, .student-back-btn:visited {
+    font-size: 4vh;
+    color: white;
+}
+
+.student-back-btn:hover, .student-back-btn:focus {
+    color: white;
+    text-decoration: none;
+}
+
+.student-header img.logo {
+    width: 30%;
+}
+
+.student-sign-in img.signin-text {
+    margin: 3%;
+    width: 10%;
+}
+
+div.sign-in-view, div.sign-up-view {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+.sign-in-view img.character-container {
+    padding-top: 5%;
+    width: 20vw;
+}
+
+.student-sign-in form.sign-in-form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    width: 30%;
+}
+
+.student-sign-in label.form-label {
+    color: white;
+    font-size: 3vh;
+}
+
+.student-sign-in div.invalid-feedback, .student-sign-up div.invalid-feedback {
+    font-size: 2vh;
+}
+
+div.student-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+form .student-buttons .btn-success {
+    margin-top: 2%;
+    background-color: #F19B37;
+    border-color: #F19B37;
+    font-size: 2.5vh;
+    height: 5.25vh;
+    width: 6vw;
+}
+  
+.student-buttons .btn-success:hover, .student-buttons .btn-success:focus, .student-buttons .btn-success:active {
+    background-color: rgb(238, 140, 27) !important;
+    border-color: rgb(238, 140, 27) !important;
+}

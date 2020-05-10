@@ -1,0 +1,143 @@
+html,body {
+    overflow: hidden;
+}
+
+/* teacher section */
+
+div.teacher-sign-up, div.teacher-sign-in {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;  
+    background: #BBD7F2;
+    font-family: 'franxurter';
+}
+
+.teacher-sign-up img.logo, .teacher-sign-in img.logo {
+    margin-top: 4%;
+    width: 30vw;
+}
+
+.teacher-sign-up img.background, .teacher-sign-in img.background {
+    width: 100vw;
+    height: 80vh; 
+}
+
+div.sign-up-view {
+    position: absolute;
+    margin: 0 auto;
+    bottom: 0;
+    margin-bottom: 6%;
+    width: 40vw;
+    height: 65vh;
+}
+
+div.sign-up-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40vw;
+    height: 65vh;
+    background: white;
+    border-radius: 0.75em;
+}
+
+div.sign-in-view {
+    position: absolute;
+    margin: 0 auto;
+    bottom: 0;
+    margin-bottom: 17%;
+    width: 40vw;
+    height: 45vh;
+}
+
+div.sign-in-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40vw;
+    height: 45vh;
+    background: white;
+    border-radius: 0.75em;
+    box-shadow: 0px 0px 10px rgba(192, 192, 192, 0.3);
+
+}
+
+.sign-up-container h1, .sign-in-container h1 {
+    font-size: 4.6vh;
+    color: #8dc63f;
+    padding-top: 5%;
+}
+
+form.sign-up-form, form.sign-in-form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-top: 2.5%;
+    text-align: left;
+}
+
+.form-control {
+    border: 1px solid #8CC63F;
+    font-size: 1.75vh;
+}
+
+.form-label {
+    font-size: 2vh;
+    color: #8dc63f;
+}
+
+.form-group {
+    margin-bottom: 4%;
+}
+
+form .btn-success {
+    align-self: flex-end;
+    margin-top: 2%;
+    background-color: #8dc63f;
+    border-color: #8dc63f;
+    font-size: 1vw;
+    height: 4vh;
+}
+  
+form .btn-success:hover, form .btn-success:focus, form .btn-success:active {
+    background-color: #8dc63f !important;
+    border-color: #8dc63f !important;
+}
+
+.sign-in-link, .sign-in-link:visited, .sign-up-link, .sign-up-link:visited {
+    margin-top: 0.25%;
+    font-size: 1vw;
+    color: #8dc63f;
+}
+
+.sign-in-link:hover, .sign-in-link:focus, .sign-up-link, .sign-up-link:visited {
+    color: #4b9f45;
+}
+
+div.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.teacher-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-primary {
+    background-color: #016E90;
+    border-color: #016E90;
+    font-size: 1vw;
+    height: 4vh;
+}
+  
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: rgb(0, 83, 109) !important;
+    border-color: rgb(0, 83, 109) !important;
+}
+
+/* student section */

@@ -1,11 +1,13 @@
-/* @font-face {
+@font-face {
   font-family: 'franxurter';
-  src: local('franxurter'), url(./fonts/franxurter.ttf) format('truetype');
-} */
+  src: local('franxurter'), url(./assets/fonts/franxurter.ttf) format('truetype');
+}
 
 body {
   margin: 0;
-  font-family: 'franxurter';
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
