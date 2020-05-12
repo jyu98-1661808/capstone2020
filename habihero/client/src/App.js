@@ -5,7 +5,8 @@ import './App.css';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import TigerEnvironment from './pages/TigerEnvironment';
-import MathModal from './components/MathModal'
+import MathModal from './components/MathModal';
+import SignIn from './pages/SignIn';
 
 function App() {
   return <BrowserRouter>
@@ -14,6 +15,7 @@ function App() {
       <Route path="/" exact component={Home} />
       <Route path="/timtiger" component={TigerEnvironment} />
       <Route path="/testing" component={MathModal} />
+      <Route path="/signin" component={SignIn} />
     </div>
   </BrowserRouter>
 }
