@@ -1,0 +1,385 @@
+/* list section */
+
+div.list-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(241, 241, 241);
+    margin-left: 20vw;
+    width: 80vw;
+}
+  
+div.list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 5%;
+    width: 85%;
+}
+  
+.list-container h3 {
+    font-size: 1.25vw;
+    font-weight: bold;
+    color: grey;
+}
+  
+div.list-span {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.list-span .btn-success {
+    background-color: #C9E5CA;
+    border-color: #C9E5CA;
+    font-size: 1vw;
+}
+  
+.list-span .btn-success:hover, .list-span .btn-success:focus, .list-span .btn-success:active {
+    background-color: #8dc63f !important;
+    border-color: #8dc63f !important;
+}
+  
+div.list-header {
+    margin-top: 1.75%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.list-header h2 {
+    white-space: nowrap;
+    font-size: 1.75vw;
+    font-weight: bold;
+    margin: 0;
+}
+  
+.list-header .btn-link, .list-header .btn-link:visited {
+    width: 35%;
+    margin-left: 2.5%;
+    font-size: 1.25vw;
+    font-weight: bold;
+    color: #8dc63f;
+}
+  
+.list-header .new-lesson {
+    display: flex;
+    align-items: center;
+}
+  
+.list-header .new-lesson span {
+    padding-left: 2%;
+    font-size: 150%;
+    align-self: flex-start;
+}
+  
+.list-header .btn-link:hover, .list-header .btn-link:focus {
+    text-decoration: none;
+    color: #4b9f45;
+}
+  
+div.sort-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+}
+  
+.sort-container p {
+    font-size: 0.9vw;
+    margin-right: 2%;
+    margin-bottom: 0;
+}
+  
+.sort-container .btn-success {
+    background-color: #8dc63f;
+    border-color: #8dc63f;
+    font-size: 1vw;
+    height: 5vh;
+}
+  
+.sort-container .btn-success:hover {
+    background-color: #4b9f45;
+    border-color: #4b9f45;
+}
+  
+/* lesson section */
+  
+.card-deck {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    height: auto;
+}
+  
+.card {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2.5%;
+    width: 100%;
+    box-shadow: 0px 0px 8px rgba(192, 192, 192, 0.3);
+}
+  
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+  
+div.card-description-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    margin-top: 2.5%;
+    width: 90%;
+}
+  
+div.card-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+    text-align: left;
+}
+  
+.card-title {
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin-bottom: 1.75%;
+}
+  
+.card-text {
+    font-size: 1vw;
+}
+  
+.card-footer {
+    width: 100%;
+}
+  
+img.lesson-image {
+    width: 25%;
+    opacity: 0.75;
+}
+  
+div.card-description-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 60%;
+    margin-top: -2%;
+}
+  
+.card-description-buttons .btn-link, .card-description-buttons .btn-link:visited {
+    padding-right: 0;
+    padding-left: 0;
+    width: 30%;
+    font-size: 1.25vw;
+    color: #8dc63f;
+}
+  
+.card-description-buttons .btn-link:hover, .card-description-buttons .btn-link:focus {
+    text-decoration: none;
+    color: #4b9f45;
+}
+  
+.card-description-buttons span {
+    margin-left: 8%;
+    color: #C9E5CA;
+}
+  
+.card-footer {
+    display: flex;
+    justify-content: center;
+    height: 40%;
+    background-color: rgba(133, 126, 187, 0.15);
+    border-top: 1px solid rgba(133, 126, 187, 0.35);
+}
+  
+div.lesson-stats {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+  
+.lesson-stats p {
+    font-size: 1.35vw;
+    margin-bottom: 0;
+    color: #857EBB;
+}
+  
+div.lesson-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+}
+  
+/* modal section */
+  
+.modal-90w {
+    width: 80%;
+    max-width: none !important;
+}
+  
+.modal-content {
+    padding: 1.5% 3% 1.5% 3%;
+}
+  
+.modal-title {
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+  
+div.modal-body {
+    display: flex;
+    flex-flow: column wrap;
+}
+  
+.modal-body label {
+    font-size: 1.1vw;
+    font-weight: bold;
+    margin-top: 2%;
+}
+  
+.modal-body p {
+    font-size: 0.9vw;
+    color: #857EBB;
+}
+  
+.modal-body a, .modal-body a:visited {
+    font-size: 0.8vw;
+    color: #857EBB;
+    font-weight: bold;
+}
+  
+.modal-body a:hover, .modal-body a:focus {
+    text-decoration: none;
+    color: rgb(87, 82, 129);
+    font-weight: bold;
+} 
+  
+.input-group-append span {
+    background: #8dc63f;
+}
+  
+.input-group-append i {
+    color: white;
+}
+  
+div.input-level-name {
+    width: 25%;
+}
+  
+div.characters-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+  
+div.character {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 16vw;
+    height: 30vh;
+    background: white;
+    box-shadow: 0px 0px 10px #cececea6;
+    border-radius: 0.75em;
+}
+  
+div.character:focus {
+    outline: 0;
+    box-shadow: 0px 0px 10px #857EBB;
+}
+  
+#character-polar-bear img {
+    height: 16vh;
+    width: 8.5vw;
+    filter: drop-shadow(0px 0px 10px #8dd4da96); 
+}
+  
+#character-tiger img {
+    height: 15.5vh;
+    width: 6.25vw;
+    filter: drop-shadow(0px 0px 10px #f19a37d3); 
+}
+  
+#character-orca img {
+    height: 14.5vh;
+    width: 7vw;
+    filter: drop-shadow(0px 0px 10px #ea425770); 
+}
+  
+#character-panda img {
+    height: 16vh;
+    width: 6vw; 
+    filter: drop-shadow(0px 0px 10px rgba(139, 198, 63, 0.7)); 
+}
+  
+.modal-footer .btn-success {
+    background-color: #8dc63f;
+    border-color: #8dc63f;
+    font-size: 1vw;
+}
+  
+.modal-footer .btn-success:hover {
+    background-color: #4b9f45;
+    border-color: #4b9f45;
+}
+  
+select#validationPolarBear, select#validationTiger, select#validationOrca, select#validationPanda {
+    width: 11vw;
+}
+  
+.character div.form-group {
+    margin-bottom: 0;
+}
+  
+div.parameters-container {
+    display: flex;
+    flex-flow: column wrap;
+    height: 26vh;
+}
+  
+.parameters-container label {
+    font-weight: normal;
+    font-size: 1vw;
+}
+  
+select#validationThreats, select#validationEquations, select#validationAttempts, select#validationInputType {
+    width: 11vw;
+    height: 4vh;
+    margin-bottom: 2.5%;
+}
+  
+div.input-habicoins {
+    width: 23.25%;
+}
+  
+.input-habicoins label {
+    font-weight: normal;
+    font-size: 1vw;
+}
+  
+.equation-container label {
+    font-weight: normal;
+    font-size: 1vw;
+}
+  
+.equation-container div.form-check {
+    margin-right: 2.5%;
+}

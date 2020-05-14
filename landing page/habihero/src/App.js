@@ -20,7 +20,7 @@ function App() {
       <div className='scroll-left'>
         <div className='scroll-content'>
           <p>Sign up to join our user testing now! </p> 
-          <button type="button" class="btn btn-danger">Click Here</button>
+          <a href='https://forms.gle/ewhBruh57tSnJjK78' className="btn btn-danger">Click Here</a>
         </div>
       </div>
       <div className='banner'>
@@ -158,7 +158,7 @@ function App() {
               <li><span style={boldStyle}>Share</span> the page with other parents &amp; teachers.</li>
             </ol>
           </div>
-          <button type='button' className='btn btn-success'>Sign Up</button>
+          <a href='https://forms.gle/ewhBruh57tSnJjK78' className='btn btn-success'>Sign Up</a>
         </div>
       </div>
       <div className='team'>
