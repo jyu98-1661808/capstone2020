@@ -5,10 +5,10 @@ import {
   Route,
   NavLink
 } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
+import Classes from './Classes';
 import Lessons from './Lessons';
+import Reports from './Reports';
 import Account from './Account';
-import TeacherSignUp from './TeacherSignUp';
 import '../styles/TeacherView.css';
 
 function TeacherView() {
@@ -23,11 +23,21 @@ function TeacherView() {
                         <Lessons />
                     </div>
                 </Route>
-                <Route path="/teacher-view/reports">
+                <Route path="/reports">
+                    <Header />
+                    <div className='main-container'>
+                        <Menu />
+                        <Reports />
+                    </div>
                 </Route>
-                <Route path="/teacher-view/classes">
+                <Route path="/classes">
+                    <Header />
+                    <div className='main-container'>
+                        <Menu />
+                        <Classes />
+                    </div>
                 </Route>
-                <Route path="/teacher-view/account">
+                <Route path="/account">
                     <Header />
                     <div className='main-container'>
                         <Menu />
@@ -35,9 +45,6 @@ function TeacherView() {
                     </div>
                 </Route>
                 {/* The bottom route should be teacher sign out, but this is for debugging and is temporary. */}
-                <Route path="/teacher-signup">
-                    <TeacherSignUp />
-                </Route>
             </Switch>
       </Router>
     );
@@ -46,9 +53,14 @@ function TeacherView() {
 function Header() {
     return (
     <header className='header'>
-        <img src='./img/logo.png' alt='habi hero logo' />
-        <NavLink to="/teacher-signup">Sign Out</NavLink>
-        <Button type='button' variant='outline-success'>Settings</Button>
+        <div className='header-container'>
+            <img className='logo' src='./img/logo.png' alt='habi hero logo' />
+            <div className='account-description'>
+                <img src='./img/teacher/teacher.png' alt='teacher' />
+                <p>Mrs.Cedargreen's 1st Grade</p>
+            </div>
+            <NavLink to="/teacher-signin" className='btn btn-outline-success'>Sign Out</NavLink>
+        </div>
     </header>
     );
 }
@@ -58,16 +70,28 @@ function Menu() {
         <div className='menu-view'>
             <div className='menu-list'>
                 <div className='menu-item'>
-                    <NavLink exact to="/teacher-view" activeClassName="active">Lessons</NavLink>
+                    <NavLink exact to="/teacher-view" activeClassName="active">
+                        <i className="fas fa-file-alt" />&nbsp;
+                        Lessons
+                    </NavLink>
                 </div>
                 <div className='menu-item'>
-                    <NavLink to="/teacher-view/reports">Reports</NavLink>
+                    <NavLink to="/classes">
+                        <i className="fas fa-apple-alt" />&nbsp;
+                        Manage Classes
+                    </NavLink>
                 </div>
                 <div className='menu-item'>
-                    <NavLink to="/teacher-view/classes">Manage Classes</NavLink>
+                    <NavLink to="/reports">
+                        <i className="fas fa-chart-bar" />&nbsp;
+                        Reports
+                    </NavLink>
                 </div>
                 <div className='menu-item'>
-                    <NavLink to="/teacher-view/account">Account</NavLink>
+                    <NavLink to="/account">
+                        <i className="fas fa-user" />&nbsp;
+                        Account
+                    </NavLink>
                 </div>
             </div>
             <img src='./img/myhero.png' alt='my hero' />
