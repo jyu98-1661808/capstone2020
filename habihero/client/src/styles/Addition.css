@@ -2,30 +2,45 @@
 .modal {
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 70%; /* Full width */
+  height: 70%; /* Full height */
+  overflow: auto; /*Enable scroll if needed */
+  background-color: rgba(100, 100, 100, 0.6); /* Black w/ opacity */
+  display: block;
+  border-radius: 25px;
+  border: 2px solid rgb(255, 255, 255);
+  font-family: 'franxurter';
 }
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  background-color: rgba(126, 126, 126, 0.6); /* Black w/ opacity */
+  width: 100%; /* Could be more or less, depending on screen size */
+}
+
+.modal-header {
+  display: block;
+}
+
+#wordQuestion {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  margin-bottom: 5px;
 }
 
 /* The Close Button */
 .close {
-  color: #aaa;
-  float: right;
-  font-size: 15px;
-  font-weight: bold;
+  color: white;
+  font-size: 25px;
+  font-weight: 200;
+  text-shadow: none;
+  opacity: 1;
+  line-height: normal;
 }
 
 .close:hover,
@@ -35,14 +50,11 @@
   cursor: pointer;
 }
 
-.modal-title { 
-  font-size: 40px;
-}
-
-.modal-body { 
-  text-align: center;
-  font-size: 80px;
+.modal-body {
+  font-size: 100px;
   padding-bottom: 10px;
+  text-align: center;
+  color: white
 }
 
 .modal-footer { 

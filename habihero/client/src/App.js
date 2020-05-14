@@ -14,6 +14,7 @@ import StudentSignUp from './pages/StudentSignUp';
 // Import the default game's main page as a component here.
 import Home from './pages/Home';
 import TigerEnvironment from './pages/TigerEnvironment';
+import TigerFire from './pages/TigerFire';
 
 function App() {
   return (
@@ -47,7 +48,10 @@ function App() {
           </Route>
           <Route path="/timtiger">
             <TigerEnvironment />
-          </Route>          
+          </Route>  
+          <Route path="/timtiger-fire">
+            <TigerFire />
+          </Route>           
         </Switch>
       </Router>
     </div>

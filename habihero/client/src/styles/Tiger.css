@@ -73,7 +73,7 @@ div.habicoins-counter {
 /* environment section */
 
 #tiger div.characters-container {
-    margin-top: 5%;
+    margin-top: 21%;
     margin-left: 5%;
     display: flex;
     flex-direction: row;
@@ -89,7 +89,58 @@ div.habicoins-counter {
     width: 6.5%;
 }
 
+.characters-container img#hero-hint {
+    position: fixed;
+    top: 26.5%;
+    left: 45%;
+    width: 12%;
+}
 
+div.missions-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+div.animated {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.missions-container a#fire {
+    position: fixed;
+    top: 22.5%;
+    left: 15%;
+}
+
+.missions-container a#tractor {
+    position: fixed;
+    top: 70%;
+    left: 18%;
+}
+
+.missions-container a#factory {
+    position: fixed;
+    top: 20%;
+    right: 23%;
+}
+
+.missions-container a#truck {
+    position: fixed;
+    top: 44%;
+    right: 10%;
+}
+
+.missions-container a#river {
+    position: fixed;
+    top: 37%;
+    right: 63.5%;
+}
+
+.missions-container img {
+    width: 3vw;
+}
 
 /* footer section */
 
