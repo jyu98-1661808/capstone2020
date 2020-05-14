@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/Addition.css';
-// import ChoiceOptions from './choiceOptions';
+import CorrectAnswer from './CorrectAnswer'
+import WrongAnswer from './WrongAnswer'
 
 class Addition extends Component {
     state = {
@@ -33,13 +34,10 @@ class Addition extends Component {
                 <div className="modal-content">
                     <div className="modal-header">
                         <button onClick={ this.props.handleClose } className="close"> Close </button>
-                        <div id="wordQuestion"> <h3> What is {this.props.num1} + {this.props.num2} ? </h3> </div>
-                        <div id="qImageOne"> <img src="temp-holder" alt="" /> </div>
-                        <div id="qImageTwo"> <img src="temp-holder-2" alt="" /> </div>
+                        <h3 id="wordQuestion"> What is {this.props.num1} + {this.props.num2} ? </h3>
                     </div>
                     <div id="numQuestion" className="modal-body"> 
-                        <div id="numQuestionNumbers"> {this.props.num1} + {this.props.num2} = </div> 
-                        <div id="numQuestionBox"> <img src="empty-box" alt="" /> </div>
+                        <div id="numQuestionNumbers"> {this.props.num1} + {this.props.num2} = </div>
                     </div>
                     <div className="modal-footer">
                         <div className="options-container">
@@ -54,14 +52,8 @@ class Addition extends Component {
                     {this.state.showResult &&
                         <div>
                             <div id="problemResults"> 
-                                {this.state.answeredCorrectly ? "Correct!" : "Try Again!"}
+                                {this.state.answeredCorrectly ? <CorrectAnswer/> : <WrongAnswer generateNewProblem={this.props.generateNewProblem} newQuestionReset={this.newQuestionReset} />}
                             </div>
-                            <button onClick={() => {
-                                this.props.generateNewProblem()
-                                this.newQuestionReset()
-                            }}> 
-                            New Problem 
-                            </button>
                         </div>
                     }
                 </div>

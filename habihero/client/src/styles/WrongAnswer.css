@@ -1,0 +1,41 @@
+/* The Modal (background) */
+.wrong-modal {
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    background-color: white;
+    /* Black w/ opacity */
+    display: block;
+    border-radius: 25px;
+    border: 2px solid rgb(255, 255, 255);
+    font-family: 'franxurter';
+}
+
+/* Modal Content/Box */
+.wrong-modal-content {
+    background-color: white;
+    /* Black w/ opacity */
+    width: 100%;
+    /* Could be more or less, depending on screen size */
+    border-radius: 25px;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.wrong-modal-header {
+    text-align: center;
+    font-size: 50px;
+}
+
+.wrong-modal-footer {
+    text-align: center;
+    font-size: 50px;
+}

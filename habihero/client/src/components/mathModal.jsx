@@ -4,7 +4,7 @@ import Addition from './Addition';
 
 class MathModal extends Component {
     state = {
-        show: false,
+        // show: true,
         num1: 0,
         num2: 0,
         choiceA: 0,
@@ -50,38 +50,38 @@ class MathModal extends Component {
         return (num === answer) ? this.generateRandom(min, max, answer) : num;
     };
 
-    showModal = () => {
-        this.setState({ show: true });
-    };
+    // showModal = () => {
+    //     this.setState({ show: true });
+    // };
 
-    hideModal = () => {
-        this.setState({ show: false });
-    }; 
+    // hideModal = () => {
+    //     this.setState({ show: false });
+    // }; 
 
     render() { 
-        
+        this.generateNewProblem();
         return ( 
             <main> 
-                <button className="newProblemBtn"
+                {/* <button className="newProblemBtn"
                     onClick={() => {
                         this.showModal();
                         this.generateNewProblem();
                     }}> 
                     New Problem
-                </button>
-                {this.state.show &&
-                    <Addition 
-                        handleClose={this.hideModal}
-                        num1={this.state.num1}
-                        num2={this.state.num2}
-                        choiceA={this.state.choiceA}
-                        choiceB={this.state.choiceB}
-                        choiceC={this.state.choiceC}
-                        choiceD={this.state.choiceD}
-                        correctOption={this.state.correctOption}
-                        generateNewProblem={this.generateNewProblem}
-                    />
-                }               
+                </button> */}
+                {/* {this.state.show && */}
+                <Addition 
+                    handleClose={this.props.hideModal}
+                    num1={this.state.num1}
+                    num2={this.state.num2}
+                    choiceA={this.state.choiceA}
+                    choiceB={this.state.choiceB}
+                    choiceC={this.state.choiceC}
+                    choiceD={this.state.choiceD}
+                    correctOption={this.state.correctOption}
+                    generateNewProblem={this.generateNewProblem}
+                />
+                {/* }                */}
             </main> 
         );
     }
