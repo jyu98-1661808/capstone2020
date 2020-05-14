@@ -1,0 +1,260 @@
+/* list section */
+
+div.list-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(241, 241, 241);
+    margin-left: 20vw;
+    width: 80vw;
+}
+  
+div.list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 5%;
+    width: 85%;
+}
+  
+.list-container h3 {
+    font-size: 1.25vw;
+    font-weight: bold;
+    color: grey;
+}
+  
+div.list-span {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.list-span .btn-success {
+    background-color: #C9E5CA;
+    border-color: #C9E5CA;
+    font-size: 1vw;
+}
+  
+.list-span .btn-success:hover, .list-span .btn-success:focus, .list-span .btn-success:active {
+    background-color: #8dc63f !important;
+    border-color: #8dc63f !important;
+}
+  
+div.list-header {
+    margin-top: 1.75%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.list-header h2 {
+    white-space: nowrap;
+    font-size: 1.75vw;
+    font-weight: bold;
+    margin: 0;
+}
+  
+.list-header .btn-link, .list-header .btn-link:visited {
+    width: 35%;
+    margin-left: 2.5%;
+    font-size: 1.25vw;
+    font-weight: bold;
+    color: #8dc63f;
+}
+  
+.list-header .new-lesson {
+    display: flex;
+    align-items: center;
+}
+  
+.list-header .new-lesson span {
+    padding-left: 2%;
+    font-size: 150%;
+    align-self: flex-start;
+}
+  
+.list-header .btn-link:hover, .list-header .btn-link:focus {
+    text-decoration: none;
+    color: #4b9f45;
+}
+  
+div.sort-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+}
+  
+.sort-container p {
+    font-size: 0.9vw;
+    margin-right: 2%;
+    margin-bottom: 0;
+}
+  
+.sort-container .btn-success {
+    background-color: #8dc63f;
+    border-color: #8dc63f;
+    font-size: 1vw;
+    height: 5vh;
+}
+  
+.sort-container .btn-success:hover {
+    background-color: #4b9f45;
+    border-color: #4b9f45;
+}
+  
+/* class stats section */
+
+div.class-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10vh; 
+}
+
+div.class-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 55%;
+    height: 8vh; 
+    background: #EDECF5;
+    border-radius: 0.75em;
+    box-shadow: 0px 4px 4px rgba(192, 192, 192, 0.3);
+}
+
+.class-info-container p {
+    margin: 0;
+    font-size: 2vh;
+    color: #857EBB;
+}
+
+img.coin-icon {
+    width: 10%;
+}
+
+/* student deck section */
+  
+div#students.card-deck {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    height: auto;
+}
+  
+#students .card {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2.5%;
+    width: 100%;
+    box-shadow: 0px 0px 8px rgba(192, 192, 192, 0.3);
+}
+  
+#students .card-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
+}
+  
+div.student-stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 45%;
+    color: #857EBB;
+    font-size: 2vh;
+}
+  
+#students .card-title {
+    margin-left: 12.5%;
+    margin-right: 10%;
+    font-size: 2.5vh;
+    font-weight: bold;
+    color: #857EBB;
+    margin-bottom: 1.75%;
+}
+  
+#students .card-text {
+    font-size: 1vw;
+}
+  
+img.student-image {
+    position: absolute;
+    left: 5%;
+    margin-right: 2%;
+    width: 4%;
+}
+
+#students .btn-danger {
+    position: absolute;
+    right: 5%;
+    top: 22%;
+}
+  
+/* modal section */
+  
+.modal-90w {
+    width: 80%;
+    max-width: none !important;
+}
+  
+.modal-content {
+    padding: 1.5% 3% 1.5% 3%;
+}
+  
+.modal-title {
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+  
+div.modal-body {
+    display: flex;
+    flex-flow: column wrap;
+}
+  
+.modal-body label {
+    font-size: 1.1vw;
+    font-weight: bold;
+    margin-top: 2%;
+}
+  
+.modal-body p {
+    font-size: 0.9vw;
+    color: #857EBB;
+}
+  
+.modal-body a, .modal-body a:visited {
+    font-size: 0.8vw;
+    color: #857EBB;
+    font-weight: bold;
+}
+  
+.modal-body a:hover, .modal-body a:focus {
+    text-decoration: none;
+    color: rgb(87, 82, 129);
+    font-weight: bold;
+} 
+  
+.modal-footer .btn-success {
+    background-color: #8dc63f;
+    border-color: #8dc63f;
+    font-size: 1vw;
+}
+  
+.modal-footer .btn-success:hover {
+    background-color: #4b9f45;
+    border-color: #4b9f45;
+}
+  

@@ -51,7 +51,7 @@ function Lessons() {
                         </Dropdown>
                     </div>
                 </div>
-                <CardDeck>
+                <CardDeck id='lessons'>
                     <LessonCard />
                     <LessonCard />
                     <LessonCard />
@@ -68,7 +68,7 @@ function Lessons() {
 function LessonCard() {
     return (
         <Card>
-            <Card.Img className='lesson-image' src="./img/sample-lesson-image.png" alt="Card image" />
+            <Card.Img className='lesson-image' src="./img/teacher/sample-lesson-image.png" alt="Card image" />
             <Card.Body>
                 <div className='card-description-container'>
                     <div className='card-description'>

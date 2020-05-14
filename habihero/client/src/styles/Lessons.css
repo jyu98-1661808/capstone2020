@@ -110,14 +110,14 @@ div.sort-container {
   
 /* lesson section */
   
-.card-deck {
+div#lessons.card-deck {
     display: flex;
     flex-flow: column;
     width: 100%;
     height: auto;
 }
   
-.card {
+#lessons  .card {
     display: flex;
     flex-direction: row;
     margin-top: 2.5%;
@@ -125,7 +125,7 @@ div.sort-container {
     box-shadow: 0px 0px 8px rgba(192, 192, 192, 0.3);
 }
   
-.card-body {
+#lessons .card-body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -136,7 +136,7 @@ div.sort-container {
     padding-right: 0;
 }
   
-div.card-description-container {
+#lessons div.card-description-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -145,7 +145,7 @@ div.card-description-container {
     width: 90%;
 }
   
-div.card-description {
+#lessons div.card-description {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -153,26 +153,26 @@ div.card-description {
     text-align: left;
 }
   
-.card-title {
+#lessons .card-title {
     font-size: 1.5vw;
     font-weight: bold;
     margin-bottom: 1.75%;
 }
   
-.card-text {
+#lessons .card-text {
     font-size: 1vw;
 }
   
-.card-footer {
+#lessons .card-footer {
     width: 100%;
 }
   
-img.lesson-image {
+#lessons img.lesson-image {
     width: 25%;
     opacity: 0.75;
 }
   
-div.card-description-buttons {
+#lessons div.card-description-buttons {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -181,7 +181,7 @@ div.card-description-buttons {
     margin-top: -2%;
 }
   
-.card-description-buttons .btn-link, .card-description-buttons .btn-link:visited {
+#lessons .card-description-buttons .btn-link, .card-description-buttons .btn-link:visited {
     padding-right: 0;
     padding-left: 0;
     width: 30%;
@@ -189,17 +189,17 @@ div.card-description-buttons {
     color: #8dc63f;
 }
   
-.card-description-buttons .btn-link:hover, .card-description-buttons .btn-link:focus {
+#lessons .card-description-buttons .btn-link:hover, .card-description-buttons .btn-link:focus {
     text-decoration: none;
     color: #4b9f45;
 }
   
-.card-description-buttons span {
+#lessons .card-description-buttons span {
     margin-left: 8%;
     color: #C9E5CA;
 }
   
-.card-footer {
+#lessons .card-footer {
     display: flex;
     justify-content: center;
     height: 40%;
