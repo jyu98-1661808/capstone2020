@@ -1,105 +1,219 @@
-body {
-    font-family: 'franxurter';
-}
-
-.home {
+div.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100vw;
     height: 100vh;
     background-image: url('../assets/background/home_background.png');
     background-repeat: no-repeat;
     background-size: cover;
-}
-  
-.header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100vw;
-}
-  
-.header img {
-    padding: 3em;
+    font-family: 'franxurter';
 }
 
-.header button {
+/* header section */
+  
+#game-home div.header {
+    position: fixed;
+    top: 2%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    background: none;
+    box-shadow: none;
+}
+  
+#game-home .header img.logo {
+    padding: 3em;
+    width: 40%;
+}
+
+#game-home .header button {
     position: fixed;
     top: 5%;
     right: 5%;
 }
 
+/* habi-coins section */
+
+div.habicoins-container {
+    position: absolute;
+    right: 2.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+div.habicoins-counter {
+    display: flex;
+    flex-direction: column;
+}
+
+.habicoins-container img {
+    width: 30%;
+}
+
+.habicoins-counter p#habicoin-value {
+    font-size: 4vh;
+    margin-bottom: 0;
+    color: #F19B37;
+}
+
+.habicoins-counter p#habicoin-text {
+    font-size: 3vh;
+    margin-top: -15%;
+    margin-bottom: 0;
+    color: white;
+}
+
+/* carousel section */
+
+div.animal {
+   width: 75% !important;
+}
+
 .animal-description {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     text-align: center;
 }
 
 .animal-description h1 {
-    margin-top: 5%;
-    font-size: 300%;
-    color: rgb(244, 250, 210)
+    font-size: 6vh;
+    color: #8DC63F;
+    -webkit-text-stroke: 2px white;
 }
 
 .animal-description h2 {
-    margin-top: -10%;
-    font-size: 250%;
-    color: rgb(226, 250, 210)
+    margin-top: 3%;
+    font-size: 3vh;
+    color: white;
 }
 
 .carousel {
-    padding-top: 7.5%;
-    padding-bottom: 10%;
-    height: 30vh;
-    width: 55vw;
-    margin: 0 auto;
+    width: 60vw;
+    margin-left: 5%;
 }
 
-.carousel img {
+.carousel div.character-container {
+    width: 54%;
+    height: 22vh;
     margin: auto;
 }
 
-.previous-button, .next-button {
-    font-size: 275%;
+.character-container img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.carousel div.character-container-locked {
+    width: 80%;
+    height: 22vh;
+    margin: auto;
+}
+
+.character-container-locked img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    -webkit-filter: brightness(20%);
+    filter:brightness(20%);
+}
+
+/* progress section */
+div.progress-container, div.progress-container-locked {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+div.progress-container {
+    margin-top: -4.7%;
+}
+
+div.progress-container-locked {
+    margin-top: 3%;
+}
+
+.progress-container-locked img {
+    position: absolute;
+    width: 2.25%;
+    margin-left: auto;
+}
+
+.progress-container img {
+    margin-left: 0;
+    margin-right: -10%;
+    width: 30%;
+}
+
+.progress {
+    width: 100%;
+    height: 4vh;
+    border: 0.2em solid white;
+    border-radius: 1.5em;
+}
+
+.progress-bar {
+    background-color: #64CBE7;
+}
+
+p.progress-bar {
+    color:black;
+}
+
+/* footer section */
+#game-home div.footer {
     position: fixed;
-    color: rgb(209, 241, 206);
-    top: 40%;
-    z-index: 10;
-}
-
-.previous-button {
-    left: 20%;
-}
-
-.next-button {
-    right: 20%;
-}
-
-/* .slick-prev, .slick-next {
-    margin-left: 40px;
-    color: white !important;
-    z-index: 4;
-} */
-
-.footer {
-    position: fixed;
-    bottom: 2.5%;
+    bottom: 0;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    width: 100vw;
-    height: 50vh;
+    justify-content: space-between;
+    align-items: center;
+    width: 95vw;
+    height: 15vh;
 }
 
-.footer img {
-    position: fixed;
-    bottom: 2.5%;
-    left: 5%;
-    height: 50%;
-    width: auto;
+#game-home .footer button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+    font-size: 3vh;
 }
 
-.footer button {
+#game-home .footer button#music {
+    margin-right: 1%;
+}
+
+#game-home .footer button#settings img, #game-home .footer button#music img {
+    float: left;
+    width: 55%;
+    height: 58%;
+}
+
+#game-home .footer button#hero-shop img {
     position: fixed;
-    bottom: 2.5%;
-    height: 5%;
+    bottom: 0;
+    width: 20%;
+}
+
+img.footer-hero {
+    position: fixed;
+    left: 32.5vw;
+    bottom: -20vh;
+    width: 10%;
 }

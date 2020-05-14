@@ -1,16 +1,12 @@
 import React from 'react';
 import { Carousel } from 'antd';
 import { NavLink } from "react-router-dom"; 
-import Icon from '@ant-design/icons';
+import ProgressBar from 'react-bootstrap/ProgressBar';
 // import RightArrow from '../assets/icons/angle-right-solid.svg';
 import 'antd/dist/antd.css';
 import '../styles/Home.css';
 
 function Home(){
-    const LeftArrow = () => (
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-left" class="svg-inline--fa fa-angle-left fa-w-8" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"></path></svg>
-    );
-
     var settings = {
         dots: false,
         slidesToShow: 3,
@@ -19,52 +15,97 @@ function Home(){
         infinite: true,
     }
 
-    return <div className='home'>
+    const tigerProgress = 300;
+    const tigerMax = 500;
+    const pandaProgress = 100;
+    const pandaMax = 500;
+
+    return (
+    <div className='home' id='game-home'>
         <div className='header'>
-            <img src='./img/game/habihero_logo.png' alt="Habi hero logo" />
-            <button>Settings</button>
+            <img className='logo' src='../img/outlined-logo.png' alt="Habi hero logo" />
+            <div className='habicoins-container'>
+                <img src='../img/habi-coin-icon.png' alt='habi coin icon' />
+                <div className='habicoins-counter'>
+                    <p id='habicoin-value'>14,000</p>
+                    <p id='habicoin-text'>habi-coins</p>
+                </div>
+            </div>
         </div>
         <div className='carousel'>
-            <Icon className='previous-button' component={LeftArrow}/>
             <Carousel {...settings}>
                 <div className='animal'>
                     <NavLink to="/timtiger">
-                        <img src='../img/game/home_tiger.png' alt='tim tiger' />
                         <div className='animal-description'>
-                            <h1>Tim Tiger</h1>
-                            <h2>Addition</h2>
+                            <h1>Alex Tiger</h1>
+                            <div className='character-container'>
+                                <img src='../img/character-icons/tiger.png' alt='tim tiger' />
+                            </div>
+                            <h2>Addition &nbsp; Level 4</h2>
+                            <div className='progress-container'>
+                                <ProgressBar now={tigerProgress} max={tigerMax} label={`${tigerProgress}/${tigerMax}`}/>
+                                <img src='../img/game/badge-1.png' alt='tiger badge' />
+                            </div>
                         </div>
                     </NavLink>
                 </div>
                 <div className='animal'>
-                    <img src='../img/game/lock.png' alt='locked content' />
                     <div className='animal-description'>
-                        <h1>Locked</h1>
-                        <h2>Temporary</h2>
+                        <h1>Lily Panda</h1>
+                        <div className='character-container'>
+                            <img src='../img/character-icons/panda.png' alt='lily panda' />
+                        </div>
+                        <h2>Subtraction &nbsp; Level 1</h2>
+                        <div className='progress-container'>
+                            <ProgressBar now={pandaProgress} max={pandaMax} label={`${pandaProgress}/${pandaMax}`} />
+                            <img src='../img/game/badge-2.png' alt='panda badge' />
+                        </div>
                     </div>
                 </div>
                 <div className='animal'>
-                    <img src='../img/game/lock.png' alt='locked content' />
                     <div className='animal-description'>
-                        <h1>Locked</h1>
-                        <h2>Temporary</h2>
+                        <h1>Tom Bear</h1>
+                        <div className='character-container-locked'>
+                            <img src='../img/character-icons/polar-bear.png' alt='tom polar bear' />
+                        </div>
+                        <h2>Measurement and Data</h2>
+                        <div className='progress-container-locked'>
+                            <ProgressBar now={0} max={500} />
+                            <img src='../img/game/lock.png' alt='locked' />
+                        </div>
                     </div>
                 </div>
                 <div className='animal'>
-                    <img src='../img/game/lock.png' alt='locked content' />
                     <div className='animal-description'>
-                        <h1>Locked</h1>
-                        <h2>Temporary</h2>
+                        <h1>Moby Orca</h1>
+                        <div className='character-container-locked'>
+                            <img src='../img/character-icons/orca.png' alt='moby orca' />
+                        </div>
+                        <h2>Geometry</h2>
+                        <div className='progress-container-locked'>
+                            <ProgressBar now={0} max={500} />
+                            <img src='../img/game/lock.png' alt='locked' />
+                        </div>
                     </div>
                 </div>
             </Carousel>
-            {/* <Icon className='next-button' component={()=><RightArrow/>}/> */}
         </div>
         <div className='footer'>
-            <img src='../img/myhero.png' alt='my hero' />
-            <button>My Collection</button>
+            <button id='settings'>
+                <img src='../img/game/setting.png' alt='setting icon' /> 
+                Settings
+            </button>
+            <button id='hero-shop'>
+                <img src='../img/game/hero-shop.png' alt='hero shop icon' /> 
+            </button>
+            <img className='footer-hero' src='../img/myhero.png' alt='my hero' />
+            <button id='music'>
+                <img src='../img/game/music.png' alt='music icon' /> 
+                Music
+            </button>
         </div>
     </div>
+    );
 }
 
 export default Home
