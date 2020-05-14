@@ -39,7 +39,7 @@ function Home(){
                         <div className='animal-description'>
                             <h1>Alex Tiger</h1>
                             <div className='character-container'>
-                                <img src='../img/character-icons/tiger.png' alt='tim tiger' />
+                                <img src='../img/character-icons/tiger.png' alt='alex tiger' />
                             </div>
                             <h2>Addition &nbsp; Level 4</h2>
                             <div className='progress-container'>
