@@ -13,6 +13,8 @@ class TigerFire extends Component {
         choiceC: 0,
         choiceD: 0,
         correctOption: 0,
+        danger: true,
+        waterUnlocked: false,
     };
 
     componentDidMount = () => {
@@ -64,6 +66,19 @@ class TigerFire extends Component {
         this.generateNewProblem();
     }; 
 
+    closeModalCorrect = () => {
+        this.setState({ 
+            show: false,
+            waterUnlocked: true,
+        });
+    }
+    removeDanger = () => {
+        this.setState({ 
+            danger: false,
+            waterUnlocked: false,
+        });
+    };
+
     render() {
         const tigerProgress = 300;
         const tigerMax = 500;
@@ -82,18 +97,7 @@ class TigerFire extends Component {
                         </div>
                     </div>
                 </div>
-                <div className='dangers-container'>
-                    <div className='fires-container'> 
-                        <img id='fire-1' src='../img/game/fire.png' alt='fire' />
-                        <img id='fire-2' src='../img/game/fire.png' alt='fire' />
-                        <img id='fire-3' src='../img/game/fire.png' alt='fire' />
-                        <img id='fire-4' src='../img/game/fire.png' alt='fire' />
-                    </div>
-                    <div className='smoke-container'> 
-                        <img id='smoke-1' src='../img/game/smoke.png' alt='smoke' />
-                        <img id='smoke-2' src='../img/game/smoke.png' alt='smoke' />
-                    </div>
-                </div>
+                {this.state.danger && <Danger/>}
                 <div className='characters-container'>
                     <img id='alex-tiger' src='../img/character-icons/tiger.png' alt='alex tiger' />
                     <img id='hero' src='../img/myhero.png' alt='my habi hero' />
@@ -109,6 +113,7 @@ class TigerFire extends Component {
                         choiceD={this.state.choiceD}
                         correctOption={this.state.correctOption}
                         generateNewProblem={this.generateNewProblem}
+                        closeModalCorrect={this.closeModalCorrect}
                     />
                 }
                 <div className='footer'>
@@ -116,11 +121,31 @@ class TigerFire extends Component {
                         <ProgressBar now={tigerProgress} max={tigerMax} label={`${tigerProgress}/${tigerMax}`} />
                         <img src='../img/game/badge-1.png' alt='tiger badge' />
                     </div>
-                    <img id='water-icon' src='./img/game/locked-water.png' alt='locked water icon' />
+                    {this.state.waterUnlocked ? 
+                        <img id='water-icon' src='./img/game/unlocked-water.png' alt='unlocked water icon' onClick={this.removeDanger} /> : 
+                        <img id='water-icon' src='./img/game/locked-water.png' alt='locked water icon' />
+                    }
                 </div>
             </div>
         );
     }
+}
+
+function Danger() { 
+    return(
+        <div className='dangers-container'>
+            <div className='fires-container'> 
+                <img id='fire-1' src='../img/game/fire.png' alt='fire' />
+                <img id='fire-2' src='../img/game/fire.png' alt='fire' />
+                <img id='fire-3' src='../img/game/fire.png' alt='fire' />
+                <img id='fire-4' src='../img/game/fire.png' alt='fire' />
+            </div>
+            <div className='smoke-container'> 
+                <img id='smoke-1' src='../img/game/smoke.png' alt='smoke' />
+                <img id='smoke-2' src='../img/game/smoke.png' alt='smoke' />
+            </div>
+        </div>
+    )
 }
 
 export default TigerFire;

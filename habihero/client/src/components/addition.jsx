@@ -52,7 +52,10 @@ class Addition extends Component {
                     {this.state.showResult &&
                         <div>
                             <div id="problemResults"> 
-                                {this.state.answeredCorrectly ? <CorrectAnswer/> : <WrongAnswer generateNewProblem={this.props.generateNewProblem} newQuestionReset={this.newQuestionReset} />}
+                                {this.state.answeredCorrectly ? 
+                                    <CorrectAnswer closeModalCorrect={this.props.closeModalCorrect}/> : 
+                                    <WrongAnswer generateNewProblem={this.props.generateNewProblem} newQuestionReset={this.newQuestionReset} />
+                                }
                             </div>
                         </div>
                     }

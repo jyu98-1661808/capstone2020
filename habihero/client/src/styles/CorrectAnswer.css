@@ -28,7 +28,22 @@
     font-size: 50px;
 }
 
+.correct-modal-body { 
+  background-color: transparent;
+  border: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.water-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 .correct-modal-footer { 
     text-align: center;
-    font-size: 150px;
+    font-size: 100px;
 }
