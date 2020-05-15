@@ -131,13 +131,20 @@ class TigerFire extends Component {
                 [danger]: false,
                 waterUnlocked: false,
                 dangerCounter: prevState.dangerCounter + 1,
-                displayReward: true,
+                // displayReward: true,
                 habicoins: prevState.habicoins + 50,
                 tigerProgress: prevState.tigerProgress + 50,
                 water: true,
             }
         });
+        this.showHabiReward();
     };
+
+    showHabiReward = () => {
+        setTimeout(() => {
+            this.setState({ displayReward: true  });
+        }, 3000);
+    }
 
     removeWater = () => {
         this.setState({
