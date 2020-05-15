@@ -159,3 +159,61 @@ div.tiger-fire-environment {
     margin-right: 6%;
     width: 22.5%;
 }
+
+/* water */
+
+div.water-container {
+    z-index: 1;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+#tiger-fire div.animated {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#tiger-fire .water-container img#water-1 {
+    position: fixed;
+    top: 30%;
+    left: 5%;
+    width: 5%;
+}
+
+#tiger-fire .water-container img#water-2 {
+    position: fixed;
+    top: 33%;
+    left: 15%;
+    width: 5%;
+}
+
+#tiger-fire .water-container img#water-3 {
+    position: fixed;
+    top: 35%;
+    left: 35%;
+    width: 5%;
+}
+
+#tiger-fire .water-container img#water-4 {
+    position: fixed;
+    top: 30%;
+    left: 25%;
+    width: 5%;
+}
+
+#tiger-fire .water-container img#mist-1 {
+    position: fixed;
+    top: 35%;
+    left: 35%;
+    width: 15%;
+}
+
+#tiger-fire .water-container img#mist-2 {
+    position: fixed;
+    top: 30%;
+    left: 15%;
+    width: 15%;
+}
+

@@ -1,7 +1,7 @@
 /* The Modal (background) */
 div#addition.modal {
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 4; /* Sit on top */
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);

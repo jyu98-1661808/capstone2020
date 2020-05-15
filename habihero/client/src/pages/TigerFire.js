@@ -27,6 +27,7 @@ class TigerFire extends Component {
         displayReward: false,
         habicoins: 2500,
         tigerProgress: 200,
+        water: false,
     };
 
     componentDidMount = () => {
@@ -106,9 +107,16 @@ class TigerFire extends Component {
                 displayReward: true,
                 habicoins: prevState.habicoins + 50,
                 tigerProgress: prevState.tigerProgress + 50,
+                water: true,
             }
         });
     };
+
+    removeWater = () => {
+        this.setState({
+            water: false,
+        })
+    }
 
     render() {
         const tigerMax = 500;
@@ -127,6 +135,22 @@ class TigerFire extends Component {
                         </div>
                     </div>
                 </div>
+                { ( !this.state.danger1 || !this.state.danger2 || !this.state.danger3 || 
+                    !this.state.danger4 || !this.state.danger5 || !this.state.danger6 ) && this.state.water &&
+                    <div className='water-container'>
+                        <ScrollAnimation id='water-animation' animateIn='slideInDown'>
+                            <img id='water-1' src='../img/game/water.png' alt='water' />
+                            <img id='water-3' src='../img/game/water.png' alt='water' />
+                        </ScrollAnimation>
+                        <ScrollAnimation delay={800} id='water-animation-2' animateIn='slideInDown'>
+                            <img id='water-2' src='../img/game/water.png' alt='water' />
+                            <img id='water-4' src='../img/game/water.png' alt='water' />
+                        </ScrollAnimation>
+                        <ScrollAnimation duration={2} delay={400} id='water-animation-2' animateIn='fadeIn' afterAnimatedIn={this.removeWater}>
+                            <img id='mist-1' src='../img/game/mist.png' alt='mist' />
+                            <img id='mist-2' src='../img/game/mist.png' alt='mist' />
+                        </ScrollAnimation>
+                    </div> }
                 <div className='dangers-container'>
                     <div className='fires-container'> 
                         {this.state.danger1 && <img id='fire-1' src='../img/game/fire.png' alt='fire' />}
