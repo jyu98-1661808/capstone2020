@@ -57,7 +57,7 @@ function Lessons() {
                     <LessonCard />
                     <LessonCard />
                 </CardDeck>
-                <Modal dialogClassName="modal-90w" show={show} onHide={handleClose} aria-labelledby="contained-modal-title-vcenter" centered>
+                <Modal id='#teacher' dialogClassName="modal-90w" show={show} onHide={handleClose} aria-labelledby="contained-modal-title-vcenter" centered>
                     <LessonModal />
                 </Modal>
             </div>

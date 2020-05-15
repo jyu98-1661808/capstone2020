@@ -233,7 +233,7 @@ div.lesson-footer {
     max-width: none !important;
 }
   
-.modal-content {
+#teacher .modal-content {
     padding: 1.5% 3% 1.5% 3%;
 }
   
@@ -346,6 +346,10 @@ select#validationPolarBear, select#validationTiger, select#validationOrca, selec
 }
   
 .character div.form-group {
+    margin-bottom: 0;
+}
+
+.parameters-container div.form-group {
     margin-bottom: 0;
 }
   
