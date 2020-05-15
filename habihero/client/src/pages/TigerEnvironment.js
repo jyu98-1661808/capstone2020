@@ -3,7 +3,6 @@ import ProgressBar from 'react-bootstrap/ProgressBar';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { NavLink } from "react-router-dom"; 
 import '../styles/Tiger.css';
-import "animate.css/animate.min.css";
 
 function TigerEnvironment() {
     const tigerProgress = 300;
