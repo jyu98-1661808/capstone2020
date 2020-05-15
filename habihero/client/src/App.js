@@ -13,6 +13,7 @@ import StudentSignIn from './pages/StudentSignIn';
 import StudentSignUp from './pages/StudentSignUp';
 // Import the default game's main page as a component here.
 import Home from './pages/Home';
+import HabiShop from './pages/HabiShop';
 import TigerEnvironment from './pages/TigerEnvironment';
 import TigerFire from './pages/TigerFire';
 
@@ -51,7 +52,10 @@ function App() {
           </Route>  
           <Route path="/timtiger-fire">
             <TigerFire />
-          </Route>           
+          </Route> 
+          <Route path="/habishop">
+            <HabiShop />  
+          </Route>          
         </Switch>
       </Router>
     </div>
