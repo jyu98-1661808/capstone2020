@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ProgressBar from 'react-bootstrap/ProgressBar';
+import ScrollAnimation from 'react-animate-on-scroll';
 import { NavLink } from "react-router-dom"; 
 import '../styles/TigerFire.css';
 import Addition from '../components/Addition';
@@ -70,11 +71,13 @@ class TigerFire extends Component {
 
     showModal = () => {
         this.setState({ show: true });
+        document.getElementById("hero").classList.add('hide');
     };
 
     hideModal = () => {
         this.setState({ show: false });
         this.generateNewProblem();
+        document.getElementById("hero").classList.remove('hide');
     }; 
 
     closeModalCorrect = () => {
@@ -82,6 +85,7 @@ class TigerFire extends Component {
             show: false,
             waterUnlocked: true,
         });
+        document.getElementById("hero").classList.remove('hide');
     }
 
     closeHabiCoinsModal = () => { 
@@ -137,9 +141,10 @@ class TigerFire extends Component {
                 </div>
                 <div className='characters-container'>
                     <img id='alex-tiger' src='../img/character-icons/tiger.png' alt='alex tiger' />
-                    <img id='hero' src='../img/myhero.png' alt='my habi hero' />
+                    <img id='hero' className='show' src='../img/myhero.png' alt='my habi hero' />
                 </div>
                 {this.state.show &&
+                <div className='problem-container'> 
                     <Addition 
                         handleClose={this.hideModal}
                         num1={this.state.num1}
@@ -152,6 +157,14 @@ class TigerFire extends Component {
                         generateNewProblem={this.generateNewProblem}
                         closeModalCorrect={this.closeModalCorrect}
                     />
+                    {/* <div className='hero-hint-details'>
+                        <p>
+                            + means add! And, add means count all of them up!
+                            Can you count all of the fires up?
+                        </p>
+                    </div> */}
+                    <img id='hero-hint' src='../img/myhero.png' alt='my hero' />
+                </div>
                 }
                 {this.state.displayReward && 
                     <HabiCoinsReward 

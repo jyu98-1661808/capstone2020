@@ -54,6 +54,10 @@ div.tiger-fire-environment {
     width: 6.5%;
 }
 
+#tiger-fire .characters-container img#hero.hide {
+    display: none;
+}
+
 #tiger-fire .characters-container img#alex-tiger {
     width: 6.5%;
 }
