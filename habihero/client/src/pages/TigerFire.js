@@ -169,8 +169,7 @@ class TigerFire extends Component {
                         </div>
                     </div>
                 </div>
-                { ( !this.state.danger1 || !this.state.danger2 || !this.state.danger3 || 
-                    !this.state.danger4 || !this.state.danger5 || !this.state.danger6 ) && this.state.water &&
+                {   this.state.water &&
                     <div className='water-container'>
                         <ScrollAnimation id='water-animation' animateIn='slideInDown'>
                             <img id='water-1' src='../img/game/water.png' alt='water' />
