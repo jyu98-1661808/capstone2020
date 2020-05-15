@@ -10,11 +10,8 @@ class WrongAnswer extends Component {
                     <div className="wrong-modal-header">
                         <p> Try Again! </p>
                     </div>
-                    <div className="wrong-modal-body">
-                    
-                    </div>
                     <div className="wrong-modal-footer">
-                        <button onClick={() => {
+                        <button className="newProblem" onClick={() => {
                             this.props.generateNewProblem()
                             this.props.newQuestionReset()
                         }}>

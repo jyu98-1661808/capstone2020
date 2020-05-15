@@ -5,6 +5,8 @@ import { NavLink } from "react-router-dom";
 import '../styles/TigerFire.css';
 import Addition from '../components/Addition';
 import HabiCoinsReward from '../components/HabiCoinsReward';
+import CorrectAnswer from '../components/CorrectAnswer';
+import WrongAnswer from '../components/WrongAnswer';
 
 class TigerFire extends Component {
     state = {
@@ -28,6 +30,8 @@ class TigerFire extends Component {
         habicoins: 2500,
         tigerProgress: 200,
         water: false,
+        answeredCorrectly: false,
+        showResult: false
     };
 
     componentDidMount = () => {
@@ -81,12 +85,35 @@ class TigerFire extends Component {
         document.getElementById("hero").classList.remove('hide');
     }; 
 
-    closeModalCorrect = () => {
-        this.setState({ 
+    ansCorrect = () => { 
+        this.setState({
+            answeredCorrectly: true,
+            showResult: true,
             show: false,
+        })
+    }
+
+    ansIncorrect = () => {
+        this.setState({
+            answeredCorrectly: false,
+            showResult: true,
+            show: false,
+        })
+    }
+
+    closeResultCorrect = () => {
+        this.setState({ 
+            showResult: false,
             waterUnlocked: true,
         });
         document.getElementById("hero").classList.remove('hide');
+    }
+
+    newQuestionReset = () => {
+        this.setState({
+            showResult: false,
+            show: true,
+        })
     }
 
     closeHabiCoinsModal = () => { 
@@ -180,6 +207,8 @@ class TigerFire extends Component {
                         correctOption={this.state.correctOption}
                         generateNewProblem={this.generateNewProblem}
                         closeModalCorrect={this.closeModalCorrect}
+                        ansCorrect={this.ansCorrect}
+                        ansIncorrect={this.ansIncorrect}
                     />
                     {/* <div className='hero-hint-details'>
                         <p>
@@ -189,6 +218,14 @@ class TigerFire extends Component {
                     </div> */}
                     <img id='hero-hint' src='../img/myhero.png' alt='my hero' />
                 </div>
+                }
+                {this.state.showResult &&
+                    <div id="problemResults"> 
+                        {this.state.answeredCorrectly ? 
+                            <CorrectAnswer closeResultCorrect={this.closeResultCorrect}/> : 
+                            <WrongAnswer generateNewProblem={this.generateNewProblem} newQuestionReset={this.newQuestionReset} />
+                        }
+                    </div>
                 }
                 {this.state.displayReward && 
                     <HabiCoinsReward 

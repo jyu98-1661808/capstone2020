@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/Addition.css';
-import CorrectAnswer from './CorrectAnswer'
-import WrongAnswer from './WrongAnswer'
+// import CorrectAnswer from './CorrectAnswer'
+// import WrongAnswer from './WrongAnswer'
 
 class Addition extends Component {
     state = {
@@ -11,21 +11,12 @@ class Addition extends Component {
 
     handleOptionClick(num) {
         if (num === this.props.correctOption) {
-            this.setState({
-                answeredCorrectly: true
-            })
+            this.props.ansCorrect()
+        } else {
+            this.props.ansIncorrect()
         }
-        this.setState({
-            showResult: true
-        })
-    };
 
-    newQuestionReset = () => {
-        this.setState({
-            answeredCorrectly: false,
-            showResult: false
-        })
-    }
+    };
     
     render() {
         var fire_group_1 = [];
@@ -70,7 +61,7 @@ class Addition extends Component {
                             <button className="btn btn-success option" onClick={() => this.handleOptionClick(4)}> {this.props.choiceD} </button>
                         </div>
                     </div>
-                    {this.state.showResult &&
+                    {/* {this.state.showResult &&
                         <div>
                             <div id="problemResults"> 
                                 {this.state.answeredCorrectly ? 
@@ -79,7 +70,7 @@ class Addition extends Component {
                                 }
                             </div>
                         </div>
-                    }
+                    } */}
                 </div>
             </div>
         );

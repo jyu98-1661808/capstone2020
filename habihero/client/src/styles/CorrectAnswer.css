@@ -1,14 +1,15 @@
 /* The Modal (background) */
 .correct-modal {
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  top: 60%;
+  z-index: 4; /* Sit on top */
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  background-color: white; /* Black w/ opacity */
+  width: 70%; /* Full width */
+  height: 45%; /* Full height */
+  overflow: hidden; /*Enable scroll if needed */
+  background-color: rgba(100, 100, 100, 0.6); /* Black w/ opacity */
   display: block;
   border-radius: 25px;
   border: 2px solid rgb(255, 255, 255);
@@ -17,15 +18,15 @@
 
 /* Modal Content/Box */
 .correct-modal-content {
-  background-color: white; /* Black w/ opacity */
+  background-color: rgba(126, 126, 126, 0.6); /* Black w/ opacity */
   width: 100%; /* Could be more or less, depending on screen size */
-  border-radius: 25px;
-  border: 2px solid rgb(255, 255, 255);
+  height: 100%;
 }
 
 .correct-modal-header { 
     text-align: center;
-    font-size: 50px;
+    font-size: 60px;
+    color: white;
 }
 
 .correct-modal-body { 
@@ -46,4 +47,5 @@
 .correct-modal-footer { 
     text-align: center;
     font-size: 100px;
+    color: white;
 }

@@ -9,7 +9,7 @@ class CorrectAnswer extends Component {
                     <div className="correct-modal-header">
                         <p> Hero Power Unlocked! </p>
                     </div>
-                    <button className="correct-modal-body" onClick={this.props.closeModalCorrect}>
+                    <button className="correct-modal-body" onClick={this.props.closeResultCorrect}>
                         <img className='water-icon' src='./img/game/unlocked-water.png' alt='unlocked water icon' />
                     </button>
                     <div className="correct-modal-footer">
