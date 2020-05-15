@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import '../styles/Tiger.css';
+import ProgressBar from 'react-bootstrap/ProgressBar';
+import '../styles/TigerFire.css';
 import Addition from '../components/Addition';
 
 class TigerFire extends Component {
@@ -64,8 +65,11 @@ class TigerFire extends Component {
     }; 
 
     render() {
+        const tigerProgress = 300;
+        const tigerMax = 500;
+
         return (
-            <div className='tiger-environment'>
+            <div className='tiger-fire-environment' id='tiger-fire'>
                  <div className='header'>
                     <button id='missions'>
                         <img src='../img/game/missions.png' alt='missions' onClick={this.showModal} />
@@ -78,7 +82,22 @@ class TigerFire extends Component {
                         </div>
                     </div>
                 </div>
-                {/* <div className='environment'></div> */}
+                <div className='dangers-container'>
+                    <div className='fires-container'> 
+                        <img id='fire-1' src='../img/game/fire.png' alt='fire' />
+                        <img id='fire-2' src='../img/game/fire.png' alt='fire' />
+                        <img id='fire-3' src='../img/game/fire.png' alt='fire' />
+                        <img id='fire-4' src='../img/game/fire.png' alt='fire' />
+                    </div>
+                    <div className='smoke-container'> 
+                        <img id='smoke-1' src='../img/game/smoke.png' alt='smoke' />
+                        <img id='smoke-2' src='../img/game/smoke.png' alt='smoke' />
+                    </div>
+                </div>
+                <div className='characters-container'>
+                    <img id='alex-tiger' src='../img/character-icons/tiger.png' alt='alex tiger' />
+                    <img id='hero' src='../img/myhero.png' alt='my habi hero' />
+                </div>
                 {this.state.show &&
                     <Addition 
                         handleClose={this.hideModal}
@@ -93,7 +112,11 @@ class TigerFire extends Component {
                     />
                 }
                 <div className='footer'>
-                    <img className='water-icon' src='./img/game/dim_water_icon.png' alt='locked water icon' />
+                    <div className='progress-container'>
+                        <ProgressBar now={tigerProgress} max={tigerMax} label={`${tigerProgress}/${tigerMax}`} />
+                        <img src='../img/game/badge-1.png' alt='tiger badge' />
+                    </div>
+                    <img id='water-icon' src='./img/game/locked-water.png' alt='locked water icon' />
                 </div>
             </div>
         );

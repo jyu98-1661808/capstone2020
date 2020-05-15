@@ -147,7 +147,7 @@ div.animated {
 #tiger div.footer {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 100vw;
     height: 10vh;
 }
