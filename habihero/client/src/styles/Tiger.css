@@ -163,3 +163,17 @@ div.animated {
 #tiger .progress {
     height: 5vh;
 }
+
+
+#tiger .footer a#back {
+    position: fixed;
+    bottom: 3%;
+    left: 3%;
+    font-size: 6vh;
+    color: white;
+}
+
+#tiger .footer a#back img {
+    margin-right: 6%;
+    width: 22.5%;
+}

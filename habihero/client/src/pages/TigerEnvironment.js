@@ -50,6 +50,10 @@ function TigerEnvironment() {
             { showHint && <img id='hero-hint' src='../img/game/missions-detail.png' alt='click a mission icon' /> }
         </div>
         <div className='footer'>
+            <NavLink id='back' to='/habihero-game'>
+                <img src='../img/game/back-icon.png' alt='back icon' />
+                home
+            </NavLink>
             <div className='progress-container'>
                 <ProgressBar now={tigerProgress} max={tigerMax} label={`${tigerProgress}/${tigerMax}`}/>
                 <img src='../img/game/badge-1.png' alt='tiger badge' />

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ProgressBar from 'react-bootstrap/ProgressBar';
+import { NavLink } from "react-router-dom"; 
 import '../styles/TigerFire.css';
 import Addition from '../components/Addition';
 
@@ -112,6 +113,10 @@ class TigerFire extends Component {
                     />
                 }
                 <div className='footer'>
+                    <NavLink id='back' to='/timtiger'>
+                        <img src='../img/game/back-icon.png' alt='back icon' /> 
+                        back
+                    </NavLink>
                     <div className='progress-container'>
                         <ProgressBar now={tigerProgress} max={tigerMax} label={`${tigerProgress}/${tigerMax}`} />
                         <img src='../img/game/badge-1.png' alt='tiger badge' />
