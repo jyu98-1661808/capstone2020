@@ -1,7 +1,7 @@
 /* The Modal (background) */
 div#addition.modal {
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 4; /* Sit on top */
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -130,4 +130,36 @@ div#numQuestionNumbers {
   text-align: center;
   width: 22.5%;
   font-size: 5vh;
+}
+
+/* hero hint section */
+
+div.hero-hint-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 7;
+  right: 3%;
+  top: 15%;
+  position: fixed;
+  background: url('../assets/icons/white-hint-detail.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20%;
+  height: 20%;
+  padding: 2%;
+  padding-bottom: 3%;
+}
+
+.hero-hint-details p {
+  font-size: 2.5vh;
+}
+
+img#hero-hint {
+  z-index: 5;
+  position: fixed;
+  transform: rotate(325deg);
+  right: -8%;
+  top: 30%;
+  width: 15%;
 }

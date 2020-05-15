@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ProgressBar from 'react-bootstrap/ProgressBar';
+import ScrollAnimation from 'react-animate-on-scroll';
 import { NavLink } from "react-router-dom"; 
 import '../styles/TigerFire.css';
 import Addition from '../components/Addition';
@@ -26,6 +27,7 @@ class TigerFire extends Component {
         displayReward: false,
         habicoins: 2500,
         tigerProgress: 200,
+        water: false,
     };
 
     componentDidMount = () => {
@@ -70,11 +72,13 @@ class TigerFire extends Component {
 
     showModal = () => {
         this.setState({ show: true });
+        document.getElementById("hero").classList.add('hide');
     };
 
     hideModal = () => {
         this.setState({ show: false });
         this.generateNewProblem();
+        document.getElementById("hero").classList.remove('hide');
     }; 
 
     closeModalCorrect = () => {
@@ -82,6 +86,7 @@ class TigerFire extends Component {
             show: false,
             waterUnlocked: true,
         });
+        document.getElementById("hero").classList.remove('hide');
     }
 
     closeHabiCoinsModal = () => { 
@@ -102,9 +107,16 @@ class TigerFire extends Component {
                 displayReward: true,
                 habicoins: prevState.habicoins + 50,
                 tigerProgress: prevState.tigerProgress + 50,
+                water: true,
             }
         });
     };
+
+    removeWater = () => {
+        this.setState({
+            water: false,
+        })
+    }
 
     render() {
         const tigerMax = 500;
@@ -123,6 +135,22 @@ class TigerFire extends Component {
                         </div>
                     </div>
                 </div>
+                { ( !this.state.danger1 || !this.state.danger2 || !this.state.danger3 || 
+                    !this.state.danger4 || !this.state.danger5 || !this.state.danger6 ) && this.state.water &&
+                    <div className='water-container'>
+                        <ScrollAnimation id='water-animation' animateIn='slideInDown'>
+                            <img id='water-1' src='../img/game/water.png' alt='water' />
+                            <img id='water-3' src='../img/game/water.png' alt='water' />
+                        </ScrollAnimation>
+                        <ScrollAnimation delay={800} id='water-animation-2' animateIn='slideInDown'>
+                            <img id='water-2' src='../img/game/water.png' alt='water' />
+                            <img id='water-4' src='../img/game/water.png' alt='water' />
+                        </ScrollAnimation>
+                        <ScrollAnimation duration={2} delay={400} id='water-animation-2' animateIn='fadeIn' afterAnimatedIn={this.removeWater}>
+                            <img id='mist-1' src='../img/game/mist.png' alt='mist' />
+                            <img id='mist-2' src='../img/game/mist.png' alt='mist' />
+                        </ScrollAnimation>
+                    </div> }
                 <div className='dangers-container'>
                     <div className='fires-container'> 
                         {this.state.danger1 && <img id='fire-1' src='../img/game/fire.png' alt='fire' />}
@@ -137,9 +165,10 @@ class TigerFire extends Component {
                 </div>
                 <div className='characters-container'>
                     <img id='alex-tiger' src='../img/character-icons/tiger.png' alt='alex tiger' />
-                    <img id='hero' src='../img/myhero.png' alt='my habi hero' />
+                    <img id='hero' className='show' src='../img/myhero.png' alt='my habi hero' />
                 </div>
                 {this.state.show &&
+                <div className='problem-container'> 
                     <Addition 
                         handleClose={this.hideModal}
                         num1={this.state.num1}
@@ -152,6 +181,14 @@ class TigerFire extends Component {
                         generateNewProblem={this.generateNewProblem}
                         closeModalCorrect={this.closeModalCorrect}
                     />
+                    {/* <div className='hero-hint-details'>
+                        <p>
+                            + means add! And, add means count all of them up!
+                            Can you count all of the fires up?
+                        </p>
+                    </div> */}
+                    <img id='hero-hint' src='../img/myhero.png' alt='my hero' />
+                </div>
                 }
                 {this.state.displayReward && 
                     <HabiCoinsReward 
