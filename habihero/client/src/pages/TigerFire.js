@@ -3,7 +3,7 @@ import ProgressBar from 'react-bootstrap/ProgressBar';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { NavLink } from "react-router-dom"; 
 import '../styles/TigerFire.css';
-import Addition from '../components/addition';
+import Addition from '../components/Addition';
 import HabiCoinsReward from '../components/HabiCoinsReward';
 import CorrectAnswer from '../components/CorrectAnswer';
 import WrongAnswer from '../components/WrongAnswer';
@@ -131,13 +131,20 @@ class TigerFire extends Component {
                 [danger]: false,
                 waterUnlocked: false,
                 dangerCounter: prevState.dangerCounter + 1,
-                displayReward: true,
+                // displayReward: true,
                 habicoins: prevState.habicoins + 50,
                 tigerProgress: prevState.tigerProgress + 50,
                 water: true,
             }
         });
+        this.showHabiReward();
     };
+
+    showHabiReward = () => {
+        setTimeout(() => {
+            this.setState({ displayReward: true  });
+        }, 3000);
+    }
 
     removeWater = () => {
         this.setState({
