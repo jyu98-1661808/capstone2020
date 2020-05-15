@@ -10,11 +10,17 @@ class HabiCoinsReward extends Component {
                         <p> Great Job! </p>
                     </div>
                     <div className="modal-body">
-                        <h1> +50 </h1>
+                        <h1> +50 Habi Coins! </h1>
                         {/* habi coins image */}
                     </div>
                     <div className="modal-footer">
-                        <h1> Habi Coins! </h1>
+                        <button onClick={() => {
+                            this.props.closeCoinsModal()
+                            this.props.generateNewProblem()
+                            this.props.showModal()
+                        }}>
+                        New Problem
+                        </button>
                     </div>
                     {/* close button */}
                 </div>
