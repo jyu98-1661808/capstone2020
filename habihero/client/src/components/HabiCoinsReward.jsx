@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
+import '../styles/HabiCoinsReward.css';
 
 class HabiCoinsReward extends Component {
     state = {}
     render() {
         return (
-            <div className="modal">
-                <div className="modal-content">
-                    <div className="modal-header">
-                        <p> Great Job! </p>
+            <div id="habiReward" className="modal">
+                <div className="habi-coins-modal-content">
+                    <div className="habi-coins-modal-header">
+                        <p> GREAT JOB! </p>
                     </div>
-                    <div className="modal-body">
-                        <h1> +50 Habi Coins! </h1>
-                        {/* habi coins image */}
+                    <div className="habi-coins-modal-body">
+                        <h1 className='coinAmt'> +50 </h1>
+                        <img className='habicoin-icon' src='../img/habi-coin-icon.png' alt='habi coin icon' />
                     </div>
-                    <div className="modal-footer">
-                        <button onClick={() => {
+                    <p className="coins"> Habi Coins </p>
+                    <div className="habi-coins-modal-footer">
+                        <button className="newProblem" onClick={() => {
                             this.props.closeCoinsModal()
                             this.props.generateNewProblem()
                             this.props.showModal()
@@ -22,7 +24,6 @@ class HabiCoinsReward extends Component {
                         New Problem
                         </button>
                     </div>
-                    {/* close button */}
                 </div>
             </div>
         );
