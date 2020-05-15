@@ -155,7 +155,7 @@ div.hero-hint-details {
   font-size: 2.5vh;
 }
 
-img#hero-hint {
+.problem-container img#hero-hint {
   z-index: 5;
   position: fixed;
   transform: rotate(325deg);
