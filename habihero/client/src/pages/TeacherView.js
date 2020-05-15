@@ -52,7 +52,7 @@ function TeacherView() {
 
 function Header() {
     return (
-    <header className='header'>
+    <header className='header' id='teacher'>
         <div className='header-container'>
             <img className='logo' src='./img/logo.png' alt='habi hero logo' />
             <div className='account-description'>

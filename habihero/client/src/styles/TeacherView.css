@@ -3,7 +3,7 @@ body {
     font-family: Arial, Helvetica, sans-serif !important;
 }
 
-.header {
+header#teacher.header {
     margin-top: -10vh;
     z-index: 20;
     position: fixed;
@@ -14,30 +14,31 @@ body {
     color: white;
 }
 
-div.header-container {
+#teacher div.header-container {
     display: flex; 
     align-items: center;
+    margin-top: 1%;
     justify-content: space-between;
     width: 100vw;
 }
   
-.header img.logo {
+#teacher.header img.logo {
     width: 15%;
 }
   
-.header-container .btn-outline-success {
+#teacher .header-container .btn-outline-success {
     margin-right: 4%;
     color: #8dc63f;
     border-color: #8dc63f;
 }
   
-.header-container .btn-outline-success:hover {
+#teacher .header-container .btn-outline-success:hover {
     color: white;
     background-color: #8dc63f;
     border-color: #8dc63f;
 }
 
-div.account-description {
+#teacher div.account-description {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -47,12 +48,12 @@ div.account-description {
     font-size: 1.75vh;
 }
 
-.account-description img {
-    width: 15%;
+#teacher .account-description img {
+    width: 6.5%;
+    margin-right: 1%;
 }
 
-.account-description p {
-    margin-left: -3%;
+#teacher .account-description p {
     margin-bottom: 0;
 }
   
