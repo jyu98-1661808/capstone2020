@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../styles/CorrectAnswer.css';
 
 class CorrectAnswer extends Component {
-    state = {  }
     render() { 
         return ( 
             <div className="correct-modal">
