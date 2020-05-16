@@ -2,13 +2,13 @@
 
 *Habihero is a web-based application dedicated to helping 1st graders overcome their numeracy difficulties with embedded conservational and environmental values.*
   
-From basic addition to subtraction, the application utilizes game-based learning through a focus on saving endangered animals.
+Habihero utilizes game-based learning through a focus on saving endangered animals.
 Each endangered species (4 in total) represents a topic in the math curricula (adhereing to the Common Core Standard);
 users must solve a variety of math problems pertaining to that topic in order to clean up the animal's environment.  
 
-## Installation
-
 You can play our game at [habihero.com](https://habihero.com).  
+
+## Installation
   
 If you want to build and run the project with mock data, please follow the instructions below.  
 
@@ -18,7 +18,9 @@ If you want to build and run the project with mock data, please follow the instr
     git clone https://github.com/jyu98-1661808/capstone2020.git
     ```
 
-2. Navigate to capstone2020/habihero/server and run the following commands:  
+2. Set Up Local Server:
+
+    * Navigate to capstone2020/habihero/server and run the following commands:  
 
     Create docker private network on local machine  
 
@@ -32,23 +34,27 @@ If you want to build and run the project with mock data, please follow the instr
     docker run -d --name redisServer --network demoNet redis
     ```
 
-    Create MySQL database (persistent user data) within private network  
-    First navigate to capstone2020/habihero/server/db
+    * Navigate to capstone2020/habihero/server/db and run the following commands:  
+
+    Create MySQL database (persistent data store) within private network  
 
     ```bash
     docker run -d --name user-database --network=customNet mysql
     ```
 
+    * Navigate to capstone/habihero/server/gateway and run the following commands:  
+
     Run Go Server
-    First Navigate to capstone/habihero/server/gateway
 
     ```bash
     docker run --network customNet -d --name 491-gateway -p 80:80 alpine
     ```
 
-3. In the project directory (capstone2020/habihero/client) run:
+3. Run App:
 
-    Install Dependencies
+    * Navigate to capstone2020/habihero/client and run the following commands:  
+    
+    Install dependencies
 
     ```bash
     npm install
@@ -61,8 +67,6 @@ If you want to build and run the project with mock data, please follow the instr
     ```
 
     Open [http://localhost:3000](http://localhost:3000) to view it in the browser.  
-    The page will reload if you make edits.  
-    You will also see any lint errors in the console.  
 
 ## Technical Description
 
