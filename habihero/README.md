@@ -18,39 +18,7 @@ If you want to build and run the project with mock data, please follow the instr
     git clone https://github.com/jyu98-1661808/capstone2020.git
     ```
 
-2. Set Up Local Server:
-
-    **Navigate to capstone2020/habihero/server and run the following commands:**  
-
-    * Create docker private network on local machine  
-
-    ```bash
-    docker network create demoNet
-    ```
-
-    * Create local redis server (session store) within private network
-
-    ```bash
-    docker run -d --name redisServer --network demoNet redis
-    ```
-
-    **Navigate to capstone2020/habihero/server/db and run the following commands:**  
-
-    * Create MySQL database (persistent data store) within private network  
-
-    ```bash
-    docker run -d --name user-database --network=customNet mysql
-    ```
-
-    **Navigate to capstone/habihero/server/gateway and run the following commands:**  
-
-    * Run Go Server
-
-    ```bash
-    docker run --network customNet -d --name 491-gateway -p 80:80 alpine
-    ```
-
-3. Run App:
+2. Run App:
 
     **Navigate to capstone2020/habihero/client and run the following commands:**  
 
