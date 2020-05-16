@@ -86,7 +86,7 @@ class ContactForm extends Component {
                     </Button>
                 </div>
             </Form>
-            <img src='./img/logo.png' alt='habi hero logo' />
+            <img src={ require('./assets/img/branding/logo.png') }  alt='habi hero logo' />
         </div>
         )
     }

@@ -18,7 +18,6 @@ p {
 /* header */
 
 header {
-  margin-top: -5%;
   z-index: 20;
   position: fixed;
   background-image: linear-gradient(white, rgb(245, 245, 245));
@@ -58,7 +57,7 @@ header {
 /* banner section */
 
 div.banner {
-  background: url(./assets/img/banner.png) center no-repeat;
+  background: url(./assets/img/background/banner.png) center no-repeat;
   background-size: cover; 
   width: 100vw;
   height: 70vh;
@@ -73,59 +72,6 @@ div.logo-container {
   align-items: center;
 }
 
-div.scroll-left {
-  margin-top: 5%;
-  background: #f7d34d;
-  width: 100vw;
-  height: 7vh;
-  overflow: hidden;
-}
-
-div.scroll-content {
-  width: 100vw;
-  height: 5vh;
-  margin-top: 1.25%;
-  text-align: center;
-  -moz-transform:translateX(50%);
-  -webkit-transform:translateX(50%);	
-  transform:translateX(50%);
-  -webkit-animation: scroll-left 15s linear infinite;
-  animation: scroll-left 15s linear infinite;
-  display: flex;
-  align-items: center;
-}
-
-.scroll-content p {
-  color: white;
-  font-weight: bold;
-  font-size: 2vh;
-  margin-right: 0.5%;
-}
-
-.scroll-content a {
-  margin-top: -0.75%;
-  font-weight: bold;
-  font-size: 1.5vh;
-}
-
-@-webkit-keyframes scroll-left {
-  0%   { -webkit-transform: translateX(100%); }
-  100% { -webkit-transform: translateX(-25%); }
-}
-
-@keyframes scroll-left {
-  0%   { 
-  -moz-transform: translateX(100%); /* Browser bug fix */
-  -webkit-transform: translateX(100%); /* Browser bug fix */
-  transform: translateX(100%); 		
-  }
-  100% { 
-  -moz-transform: translateX(-25%); /* Browser bug fix */
-  -webkit-transform: translateX(-25%); /* Browser bug fix */
-  transform: translateX(-25%); 
-  }
-}
-
 .banner img.panda {
   height: 27vh;
   margin-right: 15%;
@@ -136,7 +82,7 @@ img.logo {
   height: 17.5vh;
 }
 
-.logo-container button {
+.logo-container a {
   font-size: 2vw;
   width: 12vw;
   font-family: 'franxurter';
@@ -168,7 +114,7 @@ div.about {
   margin-top: 5%;
 }
 
-.about h1, .features h1, .progress h1, .research h1, .team h1 {
+.about h1, .features h1, .progress h1, .research h1, .team h1, .demo h1 {
   font-size: 6vh;
   text-align: left;
   font-family: 'franxurter';
@@ -340,13 +286,10 @@ div.carousel-item {
   height: 72vh;
 }
 
-img#homepage {
-  margin-top: 5%;
-}
-
 .progress-container img {
   width: 80vh;
   margin: 0 auto;
+  margin-top: 7.5%;
   box-shadow: 0px 0px 10px #cececea6;
 }
 
@@ -359,15 +302,39 @@ img#homepage {
 }
 
 .carousel-control-prev-icon {
-  background-image: url(./assets/img/previous.png);
+  background-image: url(./assets/img/icons/previous.png);
   height: 5vh;
   width: 2.65vw;
 }
 
 .carousel-control-next-icon {
-  background-image: url(./assets/img/next.png);
+  background-image: url(./assets/img/icons/next.png);
   height: 5vh;
   width: 2.65vw;
+}
+
+/* demo section */
+
+div.demo {
+  width: 85vw;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+div.demo-container {
+  background: white; 
+  height: 80vh;
+  box-shadow: 0px 0px 10px #cececea6;
+  border-radius: 0.75em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.demo-video {
+  width: 75%;
+  height: 75%;
 }
 
 /* research section */
@@ -380,26 +347,13 @@ div.research {
 
 div.research-container {
   background: white; 
-  height: 115vh;
+  height: 30vh;
   box-shadow: 0px 0px 10px #cececea6;
   border-radius: 0.75em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-div.video-mask{
-  width: 65vw;
-  height: 60vh;
-  border-radius: 1.5em; 
-  overflow: hidden; 
-  display: flex;
-  align-items: center;
-}
-
-#vid {
-  width: 65vw;
 }
 
 div.research-description {
