@@ -38,7 +38,7 @@ If you want to build and run the project with mock data, please follow the instr
 
 ## Technical Description
 
-![project-diagram](491-diagram.png)
+![project-diagram](/habihero/491-diagram.png)
 
 ### API Design
 
@@ -91,4 +91,3 @@ Please be sure to include your operating system, device, version number, and ste
 :rabbit: Chad Ohta, *back-end developer*: chadohta@gmail.com </br>
 :dog: Andre Magallanes, *UX/UI designer*: magalj@uw.edu </br>
 :panda_face: Adam Pumputis, *graphic designer*: akyp@uw.edu </br>
-
