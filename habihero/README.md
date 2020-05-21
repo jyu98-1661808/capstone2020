@@ -1,68 +1,93 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Habihero
 
-## Available Scripts
+*Habihero is a web-based application dedicated to helping 1st graders overcome their numeracy difficulties with embedded conservational and environmental values.*
+  
+Habihero utilizes game-based learning through a focus on saving endangered animals.
+Each endangered species (4 in total) represents a topic in the math curricula (adhereing to the Common Core Standard);
+users must solve a variety of math problems pertaining to that topic in order to clean up the animal's environment.  
 
-In the project directory, you can run:
+You can play our game at [habihero.com](https://habihero.com).  
 
-### `npm start`
+## Installation
+  
+If you want to build and run the project with mock data, please follow the instructions below.  
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. First, clone the repository:  
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+    ```bash
+    git clone https://github.com/jyu98-1661808/capstone2020.git
+    ```
 
-### `npm test`
+2. Run App:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    **Navigate to capstone2020/habihero/client and run the following commands:**  
 
-### `npm run build`
+    * Install dependencies
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```bash
+    npm install
+    ```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+    * Run app in the development mode
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    npm run
+    ```
 
-### `npm run eject`
+    Open [http://localhost:3000](http://localhost:3000) to view it in the browser.  
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Technical Description
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![project-diagram](491-diagram.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### API Design
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Endpoints
 
-## Learn More
+* **‘/signup**
+  * `POST`: Create a new user account
+    * `201`: `application/json`. Successfully create a new account
+    * `500`: Internal server error
+* **‘/signin**
+  * `POST`: Sign in to existing user account
+    * `200`: Successfully signed in
+    * `500`: Internal server error
+* **‘/signout**
+  * `POST`: Sign out currently signed in user
+    * `200`: Successfully signed out
+    * `500`: Internal server error
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Models
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+For our persistent data store we use a **MySQL** DB.
 
-### Code Splitting
+#### Users
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+‘user’: users will be represented in the database.
 
-### Analyzing the Bundle Size
+```go
+{
+    “UserId”: “id_value”,
+    “Email”: “email_value”,
+    “UserName”: “username_value”,
+    “FirstName”: “firstname_value”,
+    “LastName”: “lastname_value”,
+}
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Contributing
 
-### Making a Progressive Web App
+Pull requests are welcome.  
+The best way to submit feedback and report bugs is to open a Github issue.  
+Please be sure to include your operating system, device, version number, and steps to reproduce reported bugs.  
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## License
 
-### Advanced Configuration
+[MIT](https://choosealicense.com/licenses/mit/)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## Contact
 
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+:tiger: Jiyun Yu, *front-end developer*: jyu98@uw.edu </br>
+:rabbit: Chad Ohta, *back-end developer*: chadohta@gmail.com </br>
+:dog: Andre Magallanes, *UX/UI designer*: magalj@uw.edu </br>
+:panda_face: Adam Pumputis, *graphic designer*: akyp@uw.edu </br>
