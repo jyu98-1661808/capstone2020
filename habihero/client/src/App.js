@@ -16,6 +16,7 @@ import Home from './pages/Home';
 import HabiShop from './pages/HabiShop';
 import TigerEnvironment from './pages/TigerEnvironment';
 import TigerFire from './pages/TigerFire';
+import TestRegistration from './pages/TestRegistration';
 
 function App() {
   return (
@@ -55,7 +56,11 @@ function App() {
           </Route> 
           <Route path="/habishop">
             <HabiShop />  
-          </Route>          
+          </Route>
+
+          <Route path="/testregistration">
+            <TestRegistration />  
+          </Route>  
         </Switch>
       </Router>
     </div>

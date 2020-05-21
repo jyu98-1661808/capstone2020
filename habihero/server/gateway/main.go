@@ -6,12 +6,8 @@ import (
     "os"
     "database/sql"
 	"fmt"
-	// "time"
-	// "github.com/go-redis/redis"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/gomodule/redigo/redis"
-	// "capstone2020/habihero/server/gateway/handlers"
-	// "capstone2020/habihero/server/gateway/models/users"
 )
 // Package level variables
 var db *sql.DB
@@ -32,13 +28,14 @@ func main() {
 
 	// -------------------- SQL Database --------------------
 	dsn := "root:greybox491@tcp(user-database:3306)/db"
-	db, err := sql.Open("mysql", dsn)
+	var err error
+	db, err = sql.Open("mysql", dsn)
 	if err != nil {
 		fmt.Printf("error opening database: %v\n", err)
 		os.Exit(1)
 	}
 	// ensure that the database gets closed when we are done
-	defer db.Close()
+	// defer db.Close()
 	// ping the server to ensure we have a live connection to it
 	if err := db.Ping(); err != nil {
 		fmt.Printf("error pinging database: %v\n", err)
@@ -57,15 +54,17 @@ func main() {
 	cache = conn
 
 	// -------------------- Routing --------------------
-    mux := http.NewServeMux()
+	mux := http.NewServeMux()
 
-    mux.HandleFunc("/signin", SignIn)
 	mux.HandleFunc("/signup", SignUp)
+    mux.HandleFunc("/signin", SignIn)
 	mux.HandleFunc("/welcome", Welcome)
 	// mux.HandleFunc("/refresh", Refresh)
 
+	wrappedMux := Response(mux)
+
     // start the server
     fmt.Printf("listening on %s...\n", addr)
-    log.Fatal(http.ListenAndServeTLS(addr, tlsCertPath, tlsKeyPath, mux))  
+    log.Fatal(http.ListenAndServeTLS(addr, tlsCertPath, tlsKeyPath, wrappedMux))  
 }
 

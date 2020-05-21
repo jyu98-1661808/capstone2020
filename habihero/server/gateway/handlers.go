@@ -40,7 +40,7 @@ type NewUser struct {
 }
 
 // SignUp does this
-func SignUp(w http.ResponseWriter, r *http.Request){
+func SignUp(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodPost {
 		http.Error(w, "Wrong Status Method", http.StatusMethodNotAllowed)
 		return
@@ -57,7 +57,8 @@ func SignUp(w http.ResponseWriter, r *http.Request){
 	decErr := json.NewDecoder(r.Body).Decode(newUser)
 	if decErr != nil {
 		// If there is something wrong with the request body, return a 400 status
-		w.WriteHeader(http.StatusBadRequest)
+		// w.WriteHeader(http.StatusBadRequest)
+		http.Error(w, "Bad Request", http.StatusBadRequest)
 		return 
 	}
 	// Ensure the data is valid and create a new user account in the database.
@@ -68,46 +69,69 @@ func SignUp(w http.ResponseWriter, r *http.Request){
 	}
 
 	// Check for duplicate emails
-	_, err = GetByEmail(newUser.Email)
-	if err == nil {
-		http.Error(w, "Duplicate email", http.StatusBadRequest)
-		return
-	}
+	// _, err = GetByEmail(newUser.Email)
+	// if err == nil {
+	// 	http.Error(w, "Duplicate email", http.StatusBadRequest)
+	// 	return
+	// }
 
 	// After validating newUser convert newuser to a user struct
 	user, _ := newUser.ToUser()
 
-	// Next, insert the username, along with the hashed password into the database
-	if _, err = db.Query("INSERT INTO Users VALUES ($1, $2, $3, $4, $5)", 
-						user.Email, user.PassHash, user.UserName, user.FirstName, user.LastName); err != nil {
-		// If there is any issue with inserting into the database, return a 500 error
-		w.WriteHeader(http.StatusInternalServerError)
-		return
-	}
+	// // Next, insert the username, along with the hashed password into the database
+	// if _, err = db.Query("INSERT INTO Users VALUES ($1, $2, $3, $4, $5)", 
+	// 					user.Email, user.PassHash, user.UserName, user.FirstName, user.LastName); err != nil {
+	// 	// If there is any issue with inserting into the database, return a 500 error
+	// 	w.WriteHeader(http.StatusInternalServerError)
+	// 	return
+	// }
 
-	// Create a new random session token
-	u, err := uuid.NewV4()
-	sessionToken := u.String() 
-	// Set the token in the cache, along with the user whom it represents
-	// The token has an expiry time of 300 seconds
-	_, err = cache.Do("SETEX", sessionToken, "300", user.Email)
+	// insq := "INSERT INTO Users(Email, PassHash, UserName, FirstName, LastName) VALUES (?,?,?,?,?)"
+	// res, err := db.Exec(insq, user.Email, user.PassHash, user.UserName, user.FirstName, user.LastName)
+	// if err != nil {
+	// 	w.WriteHeader(http.StatusInternalServerError)
+	// 	return
+	// }
+	// //get the auto-assigned ID for the new row
+	// id, err := res.LastInsertId()
+	// if err != nil {
+	// 	fmt.Printf("error getting new ID: %v\n", id)
+	// } else {
+	// 	fmt.Printf("ID for new row is %d\n", id)
+	// }
+
+	insForm, err := db.Prepare("INSERT INTO Users(Email, PassHash, UserName, FirstName, LastName) VALUES (?,?,?,?,?)")
 	if err != nil {
-		// If there is an error in setting the cache, return an internal server error
-		w.WriteHeader(http.StatusInternalServerError)
-		return
+		panic(err.Error())
 	}
+	// insForm.Exec(user.Email, user.PassHash, user.UserName, user.FirstName, user.LastName)
+	insForm.Exec("test@gmail.com", user.PassHash, "user.UserName", "user.FirstName", "user.LastName")
 
-	// Finally, we set the client cookie for "session_token" as the session token we just generated
-	// we also set an expiry time of 300 seconds, the same as the cache
-	http.SetCookie(w, &http.Cookie {
-		Name:    "session_token",
-		Value:   sessionToken,
-		Expires: time.Now().Add(300 * time.Second),
-	})
+	// // Create a new random session token
+	// u, err := uuid.NewV4()
+	// sessionToken := u.String() 
+	// // Set the token in the cache, along with the user whom it represents
+	// // The token has an expiry time of 300 seconds
+	// _, err = cache.Do("SETEX", sessionToken, "300", user.Email)
+	// if err != nil {
+	// 	// If there is an error in setting the cache, return an internal server error
+	// 	w.WriteHeader(http.StatusInternalServerError)
+	// 	return
+	// }
+
+	// // Finally, we set the client cookie for "session_token" as the session token we just generated
+	// // we also set an expiry time of 300 seconds, the same as the cache
+	// http.SetCookie(w, &http.Cookie {
+	// 	Name:    "session_token",
+	// 	Value:   sessionToken,
+	// 	Expires: time.Now().Add(300 * time.Second),
+	// })
 
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusCreated)
+	// json.NewEncoder(w).Encode(user)
 	json.NewEncoder(w).Encode(user)
+	// w.Write([]byte("Hello, Web!\n"))
 }
 
 
@@ -277,10 +301,10 @@ func (nu *NewUser) Validate() error {
 //PhotoURL and PassHash fields appropriately
 func (nu *NewUser) ToUser() (*User, error) {
 	// didn't you alrady validate 
-	err := nu.Validate()
-	if err != nil {
-		return nil, err
-	}
+	// err := nu.Validate()
+	// if err != nil {
+	// 	return nil, err
+	// }
 
 	usr := new(User)
 	usr.Email = nu.Email
@@ -290,7 +314,7 @@ func (nu *NewUser) ToUser() (*User, error) {
 
 	//TODO: also call .SetPassword() to set the PassHash
 	//field of the User to a hash of the NewUser.Password
-	err = usr.SetPassword(nu.Password)
+	err := usr.SetPassword(nu.Password)
 	if err != nil {
 		return nil, err
 	}
