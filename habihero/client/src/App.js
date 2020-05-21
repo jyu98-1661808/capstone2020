@@ -16,6 +16,7 @@ import Home from './pages/Home';
 import HabiShop from './pages/HabiShop';
 import TigerEnvironment from './pages/TigerEnvironment';
 import TigerFire from './pages/TigerFire';
+import TigerWoods from './pages/TigerWoods';
 
 function App() {
   return (
@@ -52,6 +53,12 @@ function App() {
           </Route>  
           <Route path="/timtiger-fire">
             <TigerFire />
+          </Route> 
+          <Route path="/timtiger-tractor">
+            <TigerWoods type='tractor' />
+          </Route> 
+          <Route path="/timtiger-truck">
+            <TigerWoods type='truck' />
           </Route> 
           <Route path="/habishop">
             <HabiShop />  

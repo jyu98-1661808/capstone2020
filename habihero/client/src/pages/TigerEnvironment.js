@@ -19,7 +19,7 @@ function TigerEnvironment() {
             <div className='habicoins-container'>
                 <img src='../img/habi-coin-icon.png' alt='habi coin icon' />
                 <div className='habicoins-counter'>
-                    <p id='habicoin-value'>14,000</p>
+                    <p id='habicoin-value'>2500</p>
                     <p id='habicoin-text'>habi-coins</p>
                 </div>
             </div>
