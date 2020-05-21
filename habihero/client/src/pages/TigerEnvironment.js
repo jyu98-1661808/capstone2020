@@ -38,7 +38,7 @@ function TigerEnvironment() {
                 <NavLink id='truck' to='/timtiger-truck'>
                     <img src='../img/game/mission-icon.png' alt='mission icon' />
                 </NavLink>
-                <NavLink id='factory' to='/timtiger-factor'>
+                <NavLink id='factory' to='/timtiger-factory'>
                     <img src='../img/game/mission-icon.png' alt='mission icon' />
                 </NavLink>
             </ScrollAnimation>
