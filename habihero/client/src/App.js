@@ -18,6 +18,7 @@ import TigerEnvironment from './pages/TigerEnvironment';
 import TigerFire from './pages/TigerFire';
 import TigerWoods from './pages/TigerWoods';
 import TigerFactory from './pages/TigerFactory';
+import TigerRiver from './pages/TigerRiver';
 
 function App() {
   return (
@@ -63,6 +64,9 @@ function App() {
           </Route> 
           <Route path="/timtiger-factory">
             <TigerFactory />
+          </Route> 
+          <Route path="/timtiger-river">
+            <TigerRiver />
           </Route> 
           <Route path="/habishop">
             <HabiShop />  
