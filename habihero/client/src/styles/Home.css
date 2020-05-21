@@ -151,6 +151,7 @@ div.progress-container-locked {
 .progress-container-locked img {
     position: fixed;
     width: 2.25%;
+    bottom: 0;
     margin-left: auto;
 }
 
