@@ -49,7 +49,11 @@ class TigerEnvironment extends Component {
                                                 }}>
                             <img src='../img/game/mission-icon.png' alt='mission icon' />
                         </NavLink>
-                        <NavLink id='truck' to='/timtiger-truck'>
+                        <NavLink id='truck' to={{ pathname: '/timtiger-truck',
+                                             state: {
+                                                habicoins: this.state.habicoins
+                                             }
+                                            }}>
                             <img src='../img/game/mission-icon.png' alt='mission icon' />
                         </NavLink>
                         <NavLink id='factory' to='/timtiger-factory'>
