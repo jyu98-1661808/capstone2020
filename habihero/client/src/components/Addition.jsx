@@ -53,7 +53,9 @@ class Addition extends Component {
                             <button className="btn btn-success option" onClick={() => this.handleOptionClick(2)}> {this.props.choiceB} </button>
                             <button className="btn btn-success option" onClick={() => this.handleOptionClick(3)}> {this.props.choiceC} </button>
                             <button className="btn btn-success option" onClick={() => this.handleOptionClick(4)}> {this.props.choiceD} </button>
+                            <button className="hint-btn" onClick={() => this.setState({showHint: true})} />
                         </div>
+                        { this.state.showHint && <p className="hint-details">+ means add! To add, count all of them up Count the fires up!</p> }
                     </div>
                 </div>
             </div>

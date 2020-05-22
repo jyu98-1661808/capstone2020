@@ -240,8 +240,8 @@ class TigerRiver extends Component {
                         <img src='../img/game/badge-1.png' alt='tiger badge' />
                     </div>
                     {this.state.waterUnlocked ? 
-                        <img id='water-icon' src='./img/game/unlocked-water.png' alt='unlocked water icon' onClick={this.removeDanger} /> : 
-                        <img id='water-icon' src='./img/game/locked-water.png' alt='locked water icon' />
+                        <img id='water-icon' src='./img/game/unlocked-recycle.png' alt='unlocked recycle icon' onClick={this.removeDanger} /> : 
+                        <img id='water-icon' src='./img/game/locked-recycle.png' alt='locked recycle icon' />
                     }
                 </div>
             </div>

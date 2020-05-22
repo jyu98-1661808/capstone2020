@@ -250,8 +250,8 @@ class TigerWoods extends Component {
                         <img src='../img/game/badge-1.png' alt='tiger badge' />
                     </div>
                     {this.state.waterUnlocked ? 
-                        <img id='water-icon' src='./img/game/unlocked-water.png' alt='unlocked water icon' onClick={this.removeDanger} /> : 
-                        <img id='water-icon' src='./img/game/locked-water.png' alt='locked water icon' />
+                        <img id='water-icon' src='./img/game/unlocked-sapling.png' alt='unlocked tree sapling icon' onClick={this.removeDanger} /> : 
+                        <img id='water-icon' src='./img/game/locked-sapling.png' alt='locked tree sapling icon' />
                     }
                 </div>
             </div>
