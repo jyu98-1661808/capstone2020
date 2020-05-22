@@ -72,7 +72,7 @@ div.habicoins-counter {
 /* carousel section */
 
 div.animal {
-   width: 75% !important;
+   width: 80% !important;
 }
 
 .animal-description {
@@ -86,6 +86,7 @@ div.animal {
     font-size: 6vh;
     color: #8DC63F;
     -webkit-text-stroke: 2px white;
+    padding-right: 0;
 }
 
 .animal-description h2 {
@@ -95,7 +96,7 @@ div.animal {
 }
 
 .carousel {
-    width: 60vw;
+    width: 65vw;
     margin-left: 5%;
     margin-top: 5%;
 }
@@ -107,7 +108,7 @@ div.animal {
 }
 
 .character-container img {
-    width: 100%;
+    width: 95%;
     height: 100%;
     margin: auto;
 }
@@ -119,11 +120,16 @@ div.animal {
 }
 
 .character-container-locked img {
-    width: 100%;
+    width: 85%;
     height: 100%;
     margin: auto;
     -webkit-filter: brightness(20%);
     filter:brightness(20%);
+}
+
+.character-container-locked img#panda-locked {
+    width: 55%;
+    height: 100%;
 }
 
 /* progress section */
@@ -143,8 +149,9 @@ div.progress-container-locked {
 }
 
 .progress-container-locked img {
-    position: absolute;
+    position: fixed;
     width: 2.25%;
+    bottom: 0;
     margin-left: auto;
 }
 

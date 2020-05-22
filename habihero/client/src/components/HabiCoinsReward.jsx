@@ -8,6 +8,7 @@ class HabiCoinsReward extends Component {
             <div id="habiReward" className="modal">
                 <div className="habi-coins-modal-content">
                     <div className="habi-coins-modal-header">
+                        <button onClick={this.props.closeCoinsModal} className="close"><i class="fas fa-times"></i></button>
                         <p> GREAT JOB! </p>
                     </div>
                     <div className="habi-coins-modal-body">

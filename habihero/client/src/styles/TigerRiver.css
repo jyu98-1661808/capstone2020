@@ -1,0 +1,132 @@
+div.tiger-river-environment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../assets/background/tiger-river-environment.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'franxurter';
+}
+
+/* header section */
+  
+#tiger-river div.header {
+    z-index: 2;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    background: none;
+    box-shadow: none;
+}
+  
+#tiger-river .header button img {
+    width: 100%;
+}
+
+#tiger-river .header button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    width: 20%;
+    margin-left: -1%;
+}
+
+/* environment section */
+
+#tiger-river div.characters-container {
+    margin-top: -15%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#tiger-river .characters-container img#hero {
+    width: 6.5%;
+}
+
+#tiger-river .characters-container img#hero.hide {
+    display: none;
+}
+
+#tiger-river .characters-container img#alex-tiger {
+    width: 6.5%;
+}
+
+#tiger-river div.dangers-container {
+    position: absolute;
+    width: 100vw;
+    height: 30vh;
+}
+
+#tiger-river .trash-container img#trash-1 {
+    position: fixed;
+    bottom: 5%;
+    left: 25%;
+    width: 35%;
+}
+
+#tiger-river .trash-container img#trash-2 {
+    position: fixed;
+    top: 42.5%;
+    left: 20%;
+    width: 27.5%;
+}
+
+#tiger-river .trash-container img#trash-3 {
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    width: 15%;
+}
+
+/* footer section */
+
+#tiger-river div.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 10vh;
+    z-index: 3;
+}
+
+#tiger-river .progress-container {
+    width: 25%;
+}
+
+#tiger-river .progress-container img {
+    width: 30%;
+}
+
+#tiger-river .progress {
+    height: 5vh;
+}
+
+#tiger-river .footer img#water-icon {
+    margin-bottom: 3%;
+    margin-right: 3%;
+    width: 7.5%;
+}
+
+#tiger-river .footer a#back {
+    margin-bottom: 3%;
+    margin-left: 3%;
+    font-size: 6vh;
+    color: white;
+}
+
+#tiger-river .footer a#back img {
+    margin-right: 6%;
+    width: 22.5%;
+}

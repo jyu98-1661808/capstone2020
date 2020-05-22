@@ -16,6 +16,10 @@ import Home from './pages/Home';
 import HabiShop from './pages/HabiShop';
 import TigerEnvironment from './pages/TigerEnvironment';
 import TigerFire from './pages/TigerFire';
+import TigerWoods from './pages/TigerWoods';
+import TigerFactory from './pages/TigerFactory';
+import TigerRiver from './pages/TigerRiver';
+
 import TestRegistration from './pages/TestRegistration';
 
 function App() {
@@ -53,6 +57,18 @@ function App() {
           </Route>  
           <Route path="/timtiger-fire">
             <TigerFire />
+          </Route> 
+          <Route path="/timtiger-tractor">
+            <TigerWoods type='tractor' />
+          </Route> 
+          <Route path="/timtiger-truck">
+            <TigerWoods type='truck' />
+          </Route> 
+          <Route path="/timtiger-factory">
+            <TigerFactory />
+          </Route> 
+          <Route path="/timtiger-river">
+            <TigerRiver />
           </Route> 
           <Route path="/habishop">
             <HabiShop />  

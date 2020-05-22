@@ -82,3 +82,19 @@ h1 {
     border: 2px solid rgb(255, 255, 255);
     font-size: 25px;
 }
+
+/* The Close Button */
+.close {
+    color: white;
+    font-size: 4vh;
+    font-weight: 200;
+    opacity: 1;
+    margin-right: 15px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

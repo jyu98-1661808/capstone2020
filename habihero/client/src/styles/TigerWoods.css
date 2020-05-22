@@ -1,0 +1,176 @@
+div.tiger-woods-environment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../assets/background/tiger-woods-environment.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'franxurter';
+}
+
+/* header section */
+  
+#tiger-woods div.header {
+    z-index: 2;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    background: none;
+    box-shadow: none;
+}
+  
+#tiger-woods .header button img {
+    width: 100%;
+}
+
+#tiger-woods .header button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    width: 20%;
+    margin-left: -1%;
+}
+
+/* environment section */
+
+#tiger-woods div.characters-container {
+    z-index: 1;
+    margin-top: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#tiger-woods .characters-container img#hero {
+    width: 6.5%;
+}
+
+#tiger-woods .characters-container img#hero.hide {
+    display: none;
+}
+
+#tiger-woods .characters-container img#alex-tiger {
+    width: 6.5%;
+}
+
+#tiger-woods div.dangers-container {
+    position: absolute;
+    width: 100vw;
+    height: 30vh;
+}
+
+#tiger-woods .tractors-container img#tractor-1 {
+    position: fixed;
+    bottom: 15%;
+    left: 10%;
+}
+
+#tiger-woods .tractors-container img#tractor-2 {
+    position: fixed;
+    bottom: 35%;
+    left: 30%;
+}
+
+#tiger-woods .tractors-container img#tractor-3 {
+    position: fixed;
+    top: 22.5%;
+    left: 40%;
+}
+
+#tiger-woods .tractors-container img {
+    width: 65%;
+}
+
+#tiger-woods .woods-container img {
+    width: 100%;
+}
+
+#tiger-woods .woods-container img#woods-1 {
+    z-index: 2;
+    position: fixed;
+    bottom: 5%;
+}
+
+#tiger-woods .woods-container img#woods-2 {
+    position: fixed;
+    bottom: 35%;
+}
+
+#tiger-woods .woods-container img#woods-3 {
+    position: fixed;
+    top: 20%;
+}
+
+#tiger-woods .trucks-container img {
+    width: 90%;
+}
+
+#tiger-woods .trucks-container img#truck-1 {
+    z-index: 2;
+    position: fixed;
+    bottom: 10%;
+    left: 5%;
+}
+
+#tiger-woods .trucks-container img#truck-2 {
+    position: fixed;
+    bottom: 35%;
+    left: 5%;
+}
+
+#tiger-woods .trucks-container img#truck-3 {
+    position: fixed;
+    top: 20%;
+    left: 5%;
+}
+
+/* footer section */
+
+#tiger-woods div.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 10vh;
+    z-index: 3;
+}
+
+#tiger-woods .progress-container {
+    width: 25%;
+}
+
+#tiger-woods .progress-container img {
+    width: 30%;
+}
+
+#tiger-woods .progress {
+    height: 5vh;
+}
+
+#tiger-woods .footer img#water-icon {
+    margin-bottom: 3%;
+    margin-right: 3%;
+    width: 7.5%;
+}
+
+#tiger-woods .footer a#back {
+    margin-bottom: 3%;
+    margin-left: 3%;
+    font-size: 6vh;
+    color: white;
+}
+
+#tiger-woods .footer a#back img {
+    margin-right: 6%;
+    width: 22.5%;
+}

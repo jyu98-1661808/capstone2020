@@ -17,8 +17,6 @@ function Home(){
 
     const tigerProgress = 300;
     const tigerMax = 500;
-    const pandaProgress = 100;
-    const pandaMax = 500;
 
     return (
     <div className='home' id='game-home'>
@@ -27,7 +25,7 @@ function Home(){
             <div className='habicoins-container'>
                 <img src='../img/habi-coin-icon.png' alt='habi coin icon' />
                 <div className='habicoins-counter'>
-                    <p id='habicoin-value'>14,000</p>
+                    <p id='habicoin-value'>2500</p>
                     <p id='habicoin-text'>habi-coins</p>
                 </div>
             </div>
@@ -52,13 +50,13 @@ function Home(){
                 <div className='animal'>
                     <div className='animal-description'>
                         <h1>Lily Panda</h1>
-                        <div className='character-container'>
-                            <img src='../img/character-icons/panda.png' alt='lily panda' />
+                        <div className='character-container-locked'>
+                            <img id='panda-locked' src='../img/character-icons/panda.png' alt='lily panda' />
                         </div>
                         <h2>Subtraction &nbsp; Level 1</h2>
-                        <div className='progress-container'>
-                            <ProgressBar now={pandaProgress} max={pandaMax} label={`${pandaProgress}/${pandaMax}`} />
-                            <img src='../img/game/badge-2.png' alt='panda badge' />
+                        <div className='progress-container-locked'>
+                            <ProgressBar now={0} max={500} />
+                            <img src='../img/game/lock.png' alt='locked' />
                         </div>
                     </div>
                 </div>
