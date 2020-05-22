@@ -17,7 +17,7 @@ function StudentSignUp() {
         setValidated(true);
 
         if (validated) {
-            
+
         }
     }
 

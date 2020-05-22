@@ -9,7 +9,7 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/gomodule/redigo/redis"
 )
-// Package level variables
+
 var db *sql.DB
 var cache redis.Conn
 	
@@ -34,8 +34,6 @@ func main() {
 		fmt.Printf("error opening database: %v\n", err)
 		os.Exit(1)
 	}
-	// ensure that the database gets closed when we are done
-	// defer db.Close()
 	// ping the server to ensure we have a live connection to it
 	if err := db.Ping(); err != nil {
 		fmt.Printf("error pinging database: %v\n", err)
@@ -58,8 +56,6 @@ func main() {
 
 	mux.HandleFunc("/signup", SignUp)
     mux.HandleFunc("/signin", SignIn)
-	mux.HandleFunc("/welcome", Welcome)
-	// mux.HandleFunc("/refresh", Refresh)
 
 	wrappedMux := Response(mux)
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ProgressBar from 'react-bootstrap/ProgressBar';
-import { NavLink } from "react-router-dom"; 
+import { NavLink, withRouter } from "react-router-dom"; 
 import '../styles/TigerWoods.css';
 import Addition from '../components/Addition';
 import HabiCoinsReward from '../components/HabiCoinsReward';
@@ -25,7 +25,7 @@ class TigerWoods extends Component {
             danger3: true,
             waterUnlocked: false,
             displayReward: false,
-            habicoins: 2500,
+            habicoins: this.props.location.state.habicoins,
             tigerProgress: 200,
             water: false,
             answeredCorrectly: false,
@@ -34,6 +34,12 @@ class TigerWoods extends Component {
     }
 
     componentDidMount = () => {
+        var habicoins = this.props.location.state.habicoins;
+        var tigerProgress = this.props.location.state.tigerProgress;
+        this.setState({
+            habicoins: habicoins,
+            tigerProgress: tigerProgress
+        })
         this.generateNewProblem();
     }
 
@@ -142,7 +148,7 @@ class TigerWoods extends Component {
     showHabiReward = () => {
         setTimeout(() => {
             this.setState({ displayReward: true  });
-        }, 3000);
+        }, 500);
     }
 
     removeWater = () => {
@@ -152,7 +158,7 @@ class TigerWoods extends Component {
     }
 
     render() {
-        const tigerMax = 500;
+        const tigerMax = 1000;
 
         return (
             <div className='tiger-woods-environment' id='tiger-woods'>
@@ -230,7 +236,12 @@ class TigerWoods extends Component {
                     />
                 }
                 <div className='footer'>
-                    <NavLink id='back' to='/timtiger'>
+                    <NavLink id='back' to={{ pathname: '/timtiger',
+                                            state: {
+                                                habicoins: this.state.habicoins,
+                                                tigerProgress: this.state.tigerProgress,
+                                            }
+                                            }}>
                         <img src='../img/game/back-icon.png' alt='back icon' /> 
                         back
                     </NavLink>
@@ -248,4 +259,4 @@ class TigerWoods extends Component {
     }
 }
 
-export default TigerWoods;
+export default withRouter(TigerWoods);

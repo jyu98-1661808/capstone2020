@@ -1,21 +1,8 @@
--- testing database
--- CREATE TABLE IF NOT EXISTS Users (
---     UserID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
---     Email VARCHAR(128) NOT NULL UNIQUE,
---     PassHash BINARY(32) NOT NULL, 
---     UserName VARCHAR(255) UNIQUE, 
---     FirstName VARCHAR(128) NOT NULL,
---     LastName VARCHAR(128) NOT NULL,
---     PhotoURL VARCHAR(255) 
--- ); 
-
+-- database schema 
 CREATE TABLE IF NOT EXISTS Users (
     UserID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     Email VARCHAR(128) NOT NULL UNIQUE,
-    PassHash BINARY(32) NOT NULL,
+    PassHash VARCHAR(255) NOT NULL,
     UserName VARCHAR(255) UNIQUE,
-    FirstName VARCHAR(255),
-    LastName VARCHAR(255)
+    FullName VARCHAR(255)
 ); 
-
-

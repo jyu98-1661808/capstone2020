@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import ScrollAnimation from 'react-animate-on-scroll';
-import { NavLink } from "react-router-dom"; 
+import { NavLink, withRouter } from "react-router-dom"; 
 import '../styles/TigerFire.css';
 import Addition from '../components/Addition';
 import HabiCoinsReward from '../components/HabiCoinsReward';
@@ -9,32 +9,41 @@ import CorrectAnswer from '../components/CorrectAnswer';
 import WrongAnswer from '../components/WrongAnswer';
 
 class TigerFire extends Component {
-    state = {
-        show: false,
-        num1: 0,
-        num2: 0,
-        choiceA: 0,
-        choiceB: 0,
-        choiceC: 0,
-        choiceD: 0,
-        correctOption: 0,
-        dangerCounter: 1,
-        danger1: true,
-        danger2: true,
-        danger3: true,
-        danger4: true,
-        danger5: true,
-        danger6:true,
-        waterUnlocked: false,
-        displayReward: false,
-        habicoins: 2500,
-        tigerProgress: 200,
-        water: false,
-        answeredCorrectly: false,
-        showResult: false
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            habicoins: 0,
+            tigerProgress: 0,
+            show: false,
+            num1: 0,
+            num2: 0,
+            choiceA: 0,
+            choiceB: 0,
+            choiceC: 0,
+            choiceD: 0,
+            correctOption: 0,
+            dangerCounter: 1,
+            danger1: true,
+            danger2: true,
+            danger3: true,
+            danger4: true,
+            danger5: true,
+            danger6:true,
+            waterUnlocked: false,
+            displayReward: false,
+            water: false,
+            answeredCorrectly: false,
+            showResult: false
+        }
+    }
 
     componentDidMount = () => {
+        var habicoins = this.props.location.state.habicoins;
+        var tigerProgress = this.props.location.state.tigerProgress;
+        this.setState({
+            habicoins: habicoins,
+            tigerProgress: tigerProgress
+        })
         this.generateNewProblem();
     }
 
@@ -153,7 +162,7 @@ class TigerFire extends Component {
     }
 
     render() {
-        const tigerMax = 500;
+        const tigerMax = 1000;
 
         return (
             <div className='tiger-fire-environment' id='tiger-fire'>
@@ -241,7 +250,12 @@ class TigerFire extends Component {
                     />
                 }
                 <div className='footer'>
-                    <NavLink id='back' to='/timtiger'>
+                    <NavLink id='back' to={{ pathname: '/timtiger',
+                                            state: {
+                                                habicoins: this.state.habicoins,
+                                                tigerProgress: this.state.tigerProgress,
+                                            }
+                                            }}>
                         <img src='../img/game/back-icon.png' alt='back icon' /> 
                         back
                     </NavLink>
@@ -259,4 +273,4 @@ class TigerFire extends Component {
     }
 }
 
-export default TigerFire;
+export default withRouter(TigerFire);

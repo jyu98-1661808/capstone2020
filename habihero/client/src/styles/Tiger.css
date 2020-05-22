@@ -109,12 +109,10 @@ div.missions-container {
     height: 100%;
 }
 
-.missions-container #fire {
+.missions-container a#fire {
     position: fixed;
     top: 22.5%;
     left: 15%;
-    background-color: transparent;
-    border: none;
 }
 
 .missions-container a#tractor {

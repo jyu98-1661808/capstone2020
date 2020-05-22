@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ProgressBar from 'react-bootstrap/ProgressBar';
-import { NavLink } from "react-router-dom"; 
+import { NavLink, withRouter } from "react-router-dom"; 
 import '../styles/TigerRiver.css';
 import Addition from '../components/Addition';
 import HabiCoinsReward from '../components/HabiCoinsReward';
@@ -34,6 +34,12 @@ class TigerRiver extends Component {
     }
 
     componentDidMount = () => {
+        var habicoins = this.props.location.state.habicoins;
+        var tigerProgress = this.props.location.state.tigerProgress;
+        this.setState({
+            habicoins: habicoins,
+            tigerProgress: tigerProgress
+        })
         this.generateNewProblem();
     }
 
@@ -142,7 +148,7 @@ class TigerRiver extends Component {
     showHabiReward = () => {
         setTimeout(() => {
             this.setState({ displayReward: true  });
-        }, 3000);
+        }, 500);
     }
 
     removeWater = () => {
@@ -152,7 +158,7 @@ class TigerRiver extends Component {
     }
 
     render() {
-        const tigerMax = 500;
+        const tigerMax = 1000;
 
         return (
             <div className='tiger-river-environment' id='tiger-river'>
@@ -220,7 +226,12 @@ class TigerRiver extends Component {
                     />
                 }
                 <div className='footer'>
-                    <NavLink id='back' to='/timtiger'>
+                    <NavLink id='back' to={{ pathname: '/timtiger',
+                                            state: {
+                                                habicoins: this.state.habicoins,
+                                                tigerProgress: this.state.tigerProgress,
+                                            }
+                                            }}>
                         <img src='../img/game/back-icon.png' alt='back icon' /> 
                         back
                     </NavLink>
@@ -238,4 +249,4 @@ class TigerRiver extends Component {
     }
 }
 
-export default TigerRiver;
+export default withRouter(TigerRiver);

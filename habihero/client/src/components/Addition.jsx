@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/Addition.css';
-// import CorrectAnswer from './CorrectAnswer'
-// import WrongAnswer from './WrongAnswer'
 
 class Addition extends Component {
-    state = {
-        answeredCorrectly: false,
-        showResult: false
-    };
 
     handleOptionClick(num) {
         if (num === this.props.correctOption) {
@@ -34,7 +28,7 @@ class Addition extends Component {
             <div id='addition' className="modal">
                 <div className="modal-content">
                     <div className="modal-header">
-                        <button onClick={ this.props.handleClose } className="close"><i class="fas fa-times"></i></button>
+                        <button onClick={ this.props.handleClose } className="close"><i className="fas fa-times"></i></button>
                         <h3 id="wordQuestion"> What is {this.props.num1} + {this.props.num2} ? </h3>
                     </div>
                     <div id="numQuestion" className="modal-body"> 
@@ -61,16 +55,6 @@ class Addition extends Component {
                             <button className="btn btn-success option" onClick={() => this.handleOptionClick(4)}> {this.props.choiceD} </button>
                         </div>
                     </div>
-                    {/* {this.state.showResult &&
-                        <div>
-                            <div id="problemResults"> 
-                                {this.state.answeredCorrectly ? 
-                                    <CorrectAnswer closeModalCorrect={this.props.closeModalCorrect}/> : 
-                                    <WrongAnswer generateNewProblem={this.props.generateNewProblem} newQuestionReset={this.newQuestionReset} />
-                                }
-                            </div>
-                        </div>
-                    } */}
                 </div>
             </div>
         );

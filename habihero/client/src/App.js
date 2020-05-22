@@ -20,8 +20,6 @@ import TigerWoods from './pages/TigerWoods';
 import TigerFactory from './pages/TigerFactory';
 import TigerRiver from './pages/TigerRiver';
 
-import TestRegistration from './pages/TestRegistration';
-
 function App() {
   return (
     <div className="App"> 
@@ -73,10 +71,6 @@ function App() {
           <Route path="/habishop">
             <HabiShop />  
           </Route>
-
-          <Route path="/testregistration">
-            <TestRegistration />  
-          </Route>  
         </Switch>
       </Router>
     </div>

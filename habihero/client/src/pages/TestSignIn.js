@@ -1,13 +1,10 @@
 import React, { Component } from "react";
+// import style
 
-class TestRegistration extends Component {
+class TestSignIn extends Component {
     state = { 
         email: "",
         password: "",
-        passwordConf: "",
-        userName: "",
-        fullName: "",
-        registrationErrors: ""
     };
 
     handleChange = (event) => {
@@ -20,14 +17,9 @@ class TestRegistration extends Component {
         const data = {
             "email": this.state.email,
             "password": this.state.password,
-            "passwordConf": this.state.passwordConf,
-            "userName": this.state.userName,
-            "fullName": this.state.fullName,
         };
 
-        // console.log(data);
-
-        fetch('https://api.habihero.com:443/signup', {
+        fetch('https://api.habihero.com:443/signin', {
                 method: 'POST', // or 'PUT'
                 body: JSON.stringify(data),
                 headers: {
@@ -42,7 +34,6 @@ class TestRegistration extends Component {
             .catch((error) => {
                 console.error('Error:', error);
             });
-        
         event.preventDefault();
     }
 
@@ -68,38 +59,11 @@ class TestRegistration extends Component {
             required
           />
 
-          <input
-            type="password"
-            name="passwordConf"
-            placeholder="Password confirmation"
-            value={this.state.passwordConf}
-            onChange={this.handleChange}
-            required
-          />
-
-          <input
-            type="text"
-            name="userName"
-            placeholder="Username"
-            value={this.state.userName}
-            onChange={this.handleChange}
-            required
-          />
-
-          <input
-            type="text"
-            name="fullName"
-            placeholder="Full Name"
-            value={this.state.fullName}
-            onChange={this.handleChange}
-            required
-          />
-
-          <button type="submit">Register</button>
+          <button type="submit">Sign In</button>
         </form>
       </div>
     );
   }
 }
 
-export default TestRegistration;
+export default TestSignIn;
